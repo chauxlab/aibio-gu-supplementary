@@ -4,7 +4,7 @@ This repository is the supplementary material for the integrative review:
 
 > **Artificial Intelligence–Driven Biomarker Discovery in Genitourinary Oncology: An Integrative Review**
 
-It documents the full review process behind the manuscript — protocol, search strategies, screening decisions, data extraction, and critical appraisal — for the complete corpus of **507 included studies**, of which the manuscript itself cites a curated, representative subset (64 references; see `manuscript/`).
+It documents the full review process behind the manuscript — protocol, search strategies, screening decisions, data extraction, and critical appraisal — for the complete corpus of **507 included studies**, of which the manuscript itself cites a curated, representative subset (67 references; see `manuscript/`).
 
 No full-text PDFs are hosted in this repository. Every included and excluded study is identified by DOI and/or a direct link to the publisher/repository record (`primary_url` column in the screening files), so the original article can be retrieved from its source of record.
 
@@ -19,7 +19,7 @@ No full-text PDFs are hosted in this repository. Every included and excluded stu
 | `extraction/` | Full data-extraction dataset (n=507) and its codebook. |
 | `risk_of_bias/` | Full critical-appraisal dataset (MMAT 2018 + PROBAST + TRIPOD+AI, n=507) and its codebook. |
 | `logs/` | Decision log and workflow log documenting methodological decisions made during screening, appraisal, and extraction (both authors acted as the two independent reviewers referenced throughout). |
-| `manuscript/` | The submitted manuscript (Markdown) and the RIS file for the 64 references actually cited in its text. |
+| `manuscript/` | The submitted manuscript (Markdown) and the RIS file for the 67 references actually cited in its text. |
 | `AIBIO_GU_synthesis_summary.md` | Narrative synthesis and mapping tables (tumor site × data modality × clinical purpose) underlying the manuscript's Results section. |
 
 ## Review design

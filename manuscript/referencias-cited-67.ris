@@ -735,7 +735,7 @@ DO  - 10.3389/fimmu.2026.1759547
 UR  - https://doi.org/10.3389/fimmu.2026.1759547
 ER  - 
 
-TY  - JOUR
+TY  - UNPB
 AU  - Lisson, CS
 AU  - Manoj, S
 AU  - Wolf, D
@@ -811,7 +811,7 @@ AU  - Minghong, F
 AU  - Jianglai, W
 AU  - Zijian, T
 TI  - PLA2G2A⁺ CAFs as a Key Driver of Lymph Node Metastasis in Penile Cancer and Its Underlying Mechanisms
-T2  - Research Square
+T2  - Res Sq [Preprint]
 PY  - 2026
 DO  - 10.21203/rs.3.rs-8936508/v1
 UR  - https://doi.org/10.21203/rs.3.rs-8936508/v1
@@ -886,4 +886,46 @@ IS  - 2
 SP  - 103798
 DO  - 10.1016/j.isci.2022.103798
 UR  - https://doi.org/10.1016/j.isci.2022.103798
+ER  - 
+
+TY  - JOUR
+AU  - Kamoun, A
+AU  - de Reyniès, A
+AU  - Allory, Y
+TI  - A Consensus Molecular Classification of Muscle-invasive Bladder Cancer.
+T2  - Eur Urol
+PY  - 2020
+VL  - 77
+IS  - 4
+SP  - 420-433
+DO  - 10.1016/j.eururo.2019.09.006
+UR  - https://doi.org/10.1016/j.eururo.2019.09.006
+ER  - 
+
+TY  - JOUR
+AU  - Joshi, G
+AU  - Jain, A
+AU  - Araveeti, SR
+TI  - FDA-Approved Artificial Intelligence and Machine Learning (AI/ML)-Enabled Medical Devices: An Updated Landscape.
+T2  - Electronics
+PY  - 2024
+VL  - 13
+IS  - 3
+SP  - 498
+DO  - 10.3390/electronics13030498
+UR  - https://doi.org/10.3390/electronics13030498
+ER  - 
+
+TY  - JOUR
+AU  - Lin, JC
+AU  - Jain, B
+AU  - Iyer, JM
+TI  - Benefit-Risk Reporting for FDA-Cleared Artificial Intelligence-Enabled Medical Devices.
+T2  - JAMA Health Forum
+PY  - 2025
+VL  - 6
+IS  - 9
+SP  - e253351
+DO  - 10.1001/jamahealthforum.2025.3351
+UR  - https://doi.org/10.1001/jamahealthforum.2025.3351
 ER  - 
