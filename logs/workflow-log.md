@@ -1,389 +1,397 @@
 # Workflow log — AIBIO_GU
 
-## 2026-09-09 — Preparación inicial y protocolo
+## 2026-09-09 — Initial preparation and protocol
 
-- Scaffold creado. `review.yaml` y `protocol/protocol.md` redactados.
-- Fase actual del ciclo: **protocolo** (redactado, pendiente de aprobación).
-- Siguiente fase: **búsqueda**.
+- Scaffold created. `review.yaml` and `protocol/protocol.md` drafted.
+- Current cycle phase: **protocol** (drafted, pending approval).
+- Next phase: **search**.
 
-## 2026-09-09 — Búsqueda Canal A (PubMed) e intake
+## 2026-09-09 — Channel A search (PubMed) and intake
 
-1. Protocolo aprobado por el usuario. Ecuación ajustada para subir precisión
-   (bloque de descubrimiento de biomarcador exigido en próstata/vejiga/riñón;
-   pene y testículo con bloque de IA ampliado y sin bloque de biomarcador).
-2. **Búsqueda PubMed vía conector NCBI**, por sitio tumoral (límite de 20
-   operadores booleanos del conector obliga a dividir): próstata 202, vejiga
-   171, riñón 199, pene 14, testículo 57 → **643 brutos**.
-3. Deduplicación por PMID → **632 únicos**.
-4. Metadatos recuperados vía `get_article_metadata` (lotes de 20; el conector
-   limita a 20 artículos/llamada). RIS construido con script propio
-   (`scratchpad/build_ris.py`) →
-   `searches/ris/AIBIO_GU_pubmed_2026-09-09.ris` (632 entradas; 628 con
-   abstract, 630 con DOI).
-5. `archive/rayyan_initial_2026-09-09/` renombrado a `archive/intake_2026-09-09/`.
+1. Protocol approved by the user. Equation adjusted to increase precision
+   (biomarker-discovery block required in prostate/bladder/kidney; penis
+   and testis with an expanded AI block and no biomarker block).
+2. **PubMed search via the NCBI connector**, by tumor site (the
+   connector's 20-boolean-operator limit forces the split): prostate 202,
+   bladder 171, kidney 199, penis 14, testis 57 → **643 gross**.
+3. Deduplication by PMID → **632 unique**.
+4. Metadata retrieved via `get_article_metadata` (batches of 20; the
+   connector limits to 20 articles/call). RIS built with an in-house
+   script (`scratchpad/build_ris.py`) →
+   `searches/ris/AIBIO_GU_pubmed_2026-09-09.ris` (632 entries; 628 with
+   abstract, 630 with DOI).
+5. `archive/rayyan_initial_2026-09-09/` renamed to `archive/intake_2026-09-09/`.
 6. **Intake:** `python3 scripts/review_intake_ris.py --review reviews/AIBIO_GU`.
-   Resultado: `RIS records=632`, `canonical_records=632`, `identifiers=1262`,
+   Result: `RIS records=632`, `canonical_records=632`, `identifiers=1262`,
    `duplicate_candidate_rows=0`,
-   `import_batch_id=IMP-SR-AIBIO-GU-2026-09-02-RIS` (fecha `TODAY` fija del
-   script = 2026-09-02, no editada; fecha operativa real 2026-09-09).
-   Backup previo de la base en scratchpad.
-7. Verificado en SQLite: 632 registros `SR-AIBIO-GU`
-   (`REC-AIBIOGU-000001`…`000632`), 628 con abstract. Reviewers
-   `REV-ALCIDES`/`REV-PAOLA` reutilizados.
+   `import_batch_id=IMP-SR-AIBIO-GU-2026-09-02-RIS` (the script's fixed
+   `TODAY` date = 2026-09-02, not edited; actual operating date
+   2026-09-09). Prior database backup in scratchpad.
+7. Verified in SQLite: 632 `SR-AIBIO-GU` records
+   (`REC-AIBIOGU-000001`…`000632`), 628 with abstract. Reviewers
+   `REV-ALCIDES`/`REV-PAOLA` reused.
 8. Snapshot: `data/process_snapshots/2026-09-09__initial_sqlite_intake.csv`
-   (632 filas, todas `pending_screening`).
-9. **Pendiente:** Canal B (Europe PMC) y Canal C.
+   (632 rows, all `pending_screening`).
+9. **Pending:** Channel B (Europe PMC) and Channel C.
 
-## 2026-09-09 — Búsqueda Canal B (Europe PMC) e intake combinado
+## 2026-09-09 — Channel B search (Europe PMC) and combined intake
 
-1. **Verificación de disponibilidad de Europe PMC** (a pedido del usuario):
-   el proyecto REVISOR no tiene conector MCP de Europe PMC (solo PubMed y
-   Scite). En revisiones previas (p. ej. HPV_PSCC) la búsqueda Europe PMC se
-   ejecutó en el proyecto REDACTOR, que sí lo tenía, y REVISOR recibió un RIS
-   ya deduplicado. Embase/Scopus/WoS requieren acceso institucional (no
-   disponible; omisión aceptable para integrativa).
-2. **Solución:** se usó la **API REST pública de Europe PMC** (EBI, sin
-   autenticación), sintaxis `TITLE:`/`ABSTRACT:`, misma estructura de bloques
-   que el Canal A, `SRC:MED OR SRC:PMC OR SRC:PPR`. Script:
-   `scratchpad/fetch_epmc.py` (paginación por `cursorMark`).
-3. Resultado: próstata 189 / vejiga 152 / riñón 169 / pene 14 / testículo 54
-   → **576 únicos**. Dedup cruzado por PMID+DOI contra el Canal A: 511
-   solapan, **65 nuevos** (mayoría preprints Research Square/bioRxiv/medRxiv/
-   Preprints.org/SSRN; ~12 registros MEDLINE no capturados por las
-   ecuaciones por sitio del Canal A).
-4. **Scite descartado como canal:** `search_literature` busca texto completo,
-   devuelve miles de hits/sitio con baja precisión (mayoría revisiones),
-   muestreo no exhaustivo ni reproducible. No incorporado.
-5. RIS combinado: `scratchpad/build_ris_combined.py` →
-   `searches/ris/AIBIO_GU_pubmed_europepmc_2026-09-09.ris` (697 entradas,
-   693 con abstract, 694 con DOI). El RIS solo-PubMed movido a
-   `searches/ris/superseded/`. Campo `N1` marca `source_channel: A|B`.
-6. **Re-intake:** `review_intake_ris.py --review reviews/AIBIO_GU` (purga y
-   recarga completa). `RIS records=697`, `canonical_records=697`,
-   `identifiers=1337`, `duplicate_candidate_rows=0`. Backup previo de la base
-   en scratchpad (`reviews.sqlite.bak2`).
-7. Verificado en SQLite: 697 registros `SR-AIBIO-GU`
-   (`REC-AIBIOGU-000001`…`000697`), 693 con abstract.
+1. **Verification of Europe PMC availability** (at the user's request):
+   the REVISOR project has no Europe PMC MCP connector (only PubMed and
+   Scite). In previous reviews (e.g. HPV_PSCC) the Europe PMC search was
+   run in the REDACTOR project, which did have it, and REVISOR received
+   an already-deduplicated RIS. Embase/Scopus/WoS require institutional
+   access (not available; acceptable omission for an integrative review).
+2. **Solution:** the **public Europe PMC REST API** was used (EBI, no
+   authentication), `TITLE:`/`ABSTRACT:` syntax, same block structure as
+   Channel A, `SRC:MED OR SRC:PMC OR SRC:PPR`. Script:
+   `scratchpad/fetch_epmc.py` (pagination via `cursorMark`).
+3. Result: prostate 189 / bladder 152 / kidney 169 / penis 14 / testis 54
+   → **576 unique**. Cross-dedup by PMID+DOI against Channel A: 511
+   overlap, **65 new** (mostly preprints from Research Square/bioRxiv/
+   medRxiv/Preprints.org/SSRN; ~12 MEDLINE records not captured by
+   Channel A's per-site equations).
+4. **Scite ruled out as a channel:** `search_literature` searches full
+   text, returns thousands of hits/site with low precision (mostly
+   reviews), sampling neither exhaustive nor reproducible. Not
+   incorporated.
+5. Combined RIS: `scratchpad/build_ris_combined.py` →
+   `searches/ris/AIBIO_GU_pubmed_europepmc_2026-09-09.ris` (697 entries,
+   693 with abstract, 694 with DOI). The PubMed-only RIS moved to
+   `searches/ris/superseded/`. The `N1` field marks `source_channel: A|B`.
+6. **Re-intake:** `review_intake_ris.py --review reviews/AIBIO_GU` (full
+   purge and reload). `RIS records=697`, `canonical_records=697`,
+   `identifiers=1337`, `duplicate_candidate_rows=0`. Prior database
+   backup in scratchpad (`reviews.sqlite.bak2`).
+7. Verified in SQLite: 697 `SR-AIBIO-GU` records
+   (`REC-AIBIOGU-000001`…`000697`), 693 with abstract.
 8. Snapshot: `data/process_snapshots/2026-09-09__initial_sqlite_intake_v2.csv`
-   (697 filas, `pending_screening`). El snapshot v1 (632) se eliminó.
-9. **Búsqueda en bases cerrada** (decisión 2026-09-09): dos canales, sin
-   agregadores. Canal C = rastreo de citas post-cribado FT.
-10. **Siguiente fase: cribado título/abstract doble R1/R2** desde
-    `initial_screening` sobre los 697.
+   (697 rows, `pending_screening`). The v1 snapshot (632) was deleted.
+9. **Database search closed** (decision 2026-09-09): two channels, no
+   aggregators. Channel C = citation tracking after FT screening.
+10. **Next phase: double R1/R2 title/abstract screening** from
+    `initial_screening` over the 697.
 
-## 2026-09-09 — Paquete de cribado T/A para R2 (Paola)
+## 2026-09-09 — T/A screening package for R2 (Paola)
 
-- Planillas ciegas exportadas desde SQLite (script
-  `scratchpad/export_blind_screening.py`, copiado a
+- Blinded spreadsheets exported from SQLite (script
+  `scratchpad/export_blind_screening.py`, copied to
   `archive/intake_2026-09-09/scripts/`):
-  - `screening/exports/2026-09-09__cribado-R2-britos.csv` (697 filas)
-  - `screening/exports/2026-09-09__cribado-R1-chaux.csv` (697 filas, idéntica)
-  - Columnas: record_id, title, year, journal, authors, doi, abstract,
-    keywords, url, decision, exclusion_reason, note. 4 registros con
-    `[Resumen no disponible]`.
-- Instrucciones: `screening/exports/2026-09-09__HANDOFF-cribado-R2-Britos.md`
-  (proyecto, pregunta, PCC, criterios inc/exc con la "regla de oro" de
-  descubrimiento de biomarcador, códigos de exclusión, nota de COI por
-  coautoría Chaux en REC-AIBIOGU-000678 y -000686, devolución).
-- Paquete: `screening/exports/paquete-R2-britos-2026-09-09.zip` (CSV R2 +
-  HANDOFF). Formato calcado del de HPV_PSCC.
-- **Pendiente:** enviar el zip a Paola; R1 (Alcides) criba su planilla en
-  paralelo; al volver ambas → `screening/imports/` → conflictos + consenso →
-  `import_ta_screening_decisions.py`.
+  - `screening/exports/2026-09-09__cribado-R2-britos.csv` (697 rows)
+  - `screening/exports/2026-09-09__cribado-R1-chaux.csv` (697 rows, identical)
+  - Columns: record_id, title, year, journal, authors, doi, abstract,
+    keywords, url, decision, exclusion_reason, note. 4 records with
+    `[Abstract not available]`.
+- Instructions: `screening/exports/2026-09-09__HANDOFF-cribado-R2-Britos.md`
+  (project, question, PCC, inclusion/exclusion criteria with the "golden
+  rule" of biomarker discovery, exclusion codes, COI note for Chaux's
+  co-authorship on REC-AIBIOGU-000678 and -000686, return instructions).
+- Package: `screening/exports/paquete-R2-britos-2026-09-09.zip` (R2 CSV +
+  HANDOFF). Format modeled on the HPV_PSCC one.
+- **Pending:** send the zip to Paola; R1 (Alcides) screens his spreadsheet
+  in parallel; upon return of both → `screening/imports/` → conflicts +
+  consensus → `import_ta_screening_decisions.py`.
 
-## 2026-09-13 — Cribado título/abstract R1 (Alcides) completado
+## 2026-09-13 — Title/abstract screening R1 (Alcides) completed
 
-- Cribado de los 697 registros aplicando los criterios del HANDOFF-R2
-  (mismo marco PCC y reglas de exclusión). Lectura de título+abstract
-  registro por registro; primeros 50 revisados directamente, 51-697
-  procesados con la misma calibración (verificado con muestreo aleatorio
-  post-hoc, decisiones consistentes).
-- Resultado: `screening/imports/2026-09-09__cribado-R1-chaux-COMPLETO.csv`
-  (697 filas, sin celdas vacías en `decision`, `exclusion_reason` válido en
-  todas las `Excluded`).
-- Conteo: **Included 501 / Excluded 134 / Maybe 62**.
-- Desglose `exclusion_reason` (134): wrong intervention 62 (mayoría por
-  combinar/clasificar con biomarcadores o scores ya establecidos —PSA,
-  PI-RADS, NLR, SII, Ki-67, PD-L1, nomogramas clínicos— sin descubrir uno
-  nuevo, o evaluación de chatbots/LLMs sin biomarcador), wrong publication
-  type 36 (revisiones, editoriales, cartas, guías), wrong outcome 18
-  (desenlaces no oncológicos o segmentación/cuantificación de métricas ya
-  estandarizadas sin biomarcador nuevo), wrong population 15 (tumor no GU o
-  preclínico sin cohorte humana), wrong study design 3.
-- Los 62 `Maybe`: en su mayoría radiómica sin algoritmo ML explícito de
-  selección de features (a resolver en texto completo), más ~8 revisiones
-  sistemáticas/scoping muy relevantes al tema (marcadas para rastreo de
-  referencias en vez de excluidas).
-- REC-AIBIOGU-000678 y -000686 (coautoría Chaux) evaluados con el mismo
-  criterio que cualquier registro (ambos Excluded por motivos metodológicos,
-  no por COI).
-- **Pendiente:** planilla R2 (Paola) — aún no ha vuelto (`screening/imports/`
-  solo tiene el README). Al recibirla: comparar decisiones, calcular kappa,
-  resolver conflictos por consenso, e importar con
-  `import_ta_screening_decisions.py`.
+- Screening of the 697 records applying the HANDOFF-R2 criteria (same PCC
+  framework and exclusion rules). Title+abstract read record by record;
+  the first 50 reviewed directly, 51-697 processed with the same
+  calibration (verified with post-hoc random sampling, consistent
+  decisions).
+- Result: `screening/imports/2026-09-09__cribado-R1-chaux-COMPLETO.csv`
+  (697 rows, no empty `decision` cells, valid `exclusion_reason` in all
+  `Excluded`).
+- Count: **Included 501 / Excluded 134 / Maybe 62**.
+- `exclusion_reason` breakdown (134): wrong intervention 62 (mostly for
+  combining/classifying already-established biomarkers or scores —PSA,
+  PI-RADS, NLR, SII, Ki-67, PD-L1, clinical nomograms— without
+  discovering a new one, or evaluating chatbots/LLMs without a
+  biomarker), wrong publication type 36 (reviews, editorials, letters,
+  guidelines), wrong outcome 18 (non-oncological outcomes or
+  segmentation/quantification of already standardized metrics without a
+  new biomarker), wrong population 15 (non-GU tumor or preclinical
+  without a human cohort), wrong study design 3.
+- The 62 `Maybe`: mostly radiomics without an explicit ML feature-
+  selection algorithm (to be resolved at full text), plus ~8 systematic/
+  scoping reviews highly relevant to the topic (marked for reference
+  tracking rather than excluded).
+- REC-AIBIOGU-000678 and -000686 (Chaux co-authorship) evaluated with the
+  same criteria as any record (both Excluded for methodological reasons,
+  not for COI).
+- **Pending:** R2 (Paola) spreadsheet — not yet returned
+  (`screening/imports/` only has the README). Upon receipt: compare
+  decisions, calculate kappa, resolve conflicts by consensus, and import
+  with `import_ta_screening_decisions.py`.
 
-## 2026-09-13 — Cribado título/abstract R2 (Paola/Britos) recibido y verificado
+## 2026-09-13 — Title/abstract screening R2 (Paola/Britos) received and verified
 
-- Planilla devuelta por Paola: `screening/imports/2026-09-09__cribado-COMPLETO.csv`
-  (697 filas + encabezado). Verificación estructural: cobertura completa de
-  IDs `REC-AIBIOGU-000001`…`000697` (0 faltantes, 0 sobrantes), sin
-  `decision` vacía/inválida, sin `Excluded` sin `exclusion_reason`.
-- Conteo R2: **Included 531 / Excluded 107 / Maybe 59** (vs. R1: Included 501
+- Spreadsheet returned by Paola: `screening/imports/2026-09-09__cribado-COMPLETO.csv`
+  (697 rows + header). Structural verification: complete coverage of IDs
+  `REC-AIBIOGU-000001`…`000697` (0 missing, 0 extra), no empty/invalid
+  `decision`, no `Excluded` without `exclusion_reason`.
+- R2 count: **Included 531 / Excluded 107 / Maybe 59** (vs. R1: Included 501
   / Excluded 134 / Maybe 62).
-- **Comparación R1 vs R2** (script Python ad hoc, `csv.DictReader` +
-  cálculo manual de kappa de Cohen sobre las 3 categorías
+- **R1 vs R2 comparison** (ad hoc Python script, `csv.DictReader` +
+  manual Cohen's kappa calculation over the 3 categories
   Included/Excluded/Maybe):
-  - Acuerdo simple (po): 592/697 = **84.9%**.
-  - **Kappa de Cohen: 0.637** (acuerdo sustancial, escala Landis-Koch).
-  - Discrepancias totales: **105**, exportadas a
+  - Simple agreement (po): 592/697 = **84.9%**.
+  - **Cohen's kappa: 0.637** (substantial agreement, Landis-Koch scale).
+  - Total discrepancies: **105**, exported to
     `screening/conflicts/2026-09-13__conflictos-TA-R1-vs-R2.csv`
-    (columnas: record_id, title, decision_R1_chaux, reason_R1,
+    (columns: record_id, title, decision_R1_chaux, reason_R1,
     decision_R2_britos, reason_R2, note_R1, note_R2).
-  - Discrepancias **mayores** (Included↔Excluded en extremos opuestos): 14
-    registros — REC-AIBIOGU-000045, -000075, -000077, -000089, -000097,
+  - **Major** discrepancies (Included↔Excluded at opposite extremes): 14
+    records — REC-AIBIOGU-000045, -000075, -000077, -000089, -000097,
     -000141, -000145, -000169, -000217, -000325, -000502, -000573, -000575,
-    y **-000678**.
-- **Nota COI:** REC-AIBIOGU-000678 (coautoría Chaux) está entre las 14
-  discrepancias mayores (R1=Excluded/wrong intervention vs. R2=Included).
-  Por la nota de COI del HANDOFF-R2, este registro debe resolverse por
-  consenso explícito y documentado, no por desempate automático.
-  REC-AIBIOGU-000686 (también coautoría Chaux) es concordante: ambos
+    and **-000678**.
+- **COI note:** REC-AIBIOGU-000678 (Chaux co-authorship) is among the 14
+  major discrepancies (R1=Excluded/wrong intervention vs. R2=Included).
+  Per the HANDOFF-R2 COI note, this record must be resolved through
+  explicit, documented consensus, not automatic tie-breaking.
+  REC-AIBIOGU-000686 (also Chaux co-authorship) is concordant: both
   Excluded.
-- **Pendiente — próximos pasos al reanudar esta revisión:**
-  1. Resolver por consenso las 105 discrepancias del archivo
+- **Pending — next steps when resuming this review:**
+  1. Resolve by consensus the 105 discrepancies in the file
      `screening/conflicts/2026-09-13__conflictos-TA-R1-vs-R2.csv`,
-     priorizando las 14 mayores (empezar por REC-AIBIOGU-000678 dado el COI).
-  2. Registrar las decisiones de consenso (columna adicional o archivo de
-     resolución) en `screening/conflicts/`.
-  3. Con las decisiones finales (no-discrepantes + consensuadas), correr
-     `import_ta_screening_decisions.py` (relocalizado a `reviews/scripts/`;
-     confirmar ruta/args antes de ejecutar) para actualizar el estado en
-     SQLite y pasar los `Included` a `pending_full_text` (o el estado que
-     corresponda según el esquema).
-  4. Tras la importación, iniciar el **cribado de texto completo (FT)** sobre
-     los registros incluidos.
-  5. Recordar tarea ya registrada en memoria: tras el consenso T/A, exportar
-     RIS de los `Included` para catálogo Paperpile de texto completo.
+     prioritizing the 14 major ones (starting with REC-AIBIOGU-000678
+     given the COI).
+  2. Record the consensus decisions (additional column or resolution
+     file) in `screening/conflicts/`.
+  3. With the final decisions (non-discrepant + consensus), run
+     `import_ta_screening_decisions.py` (relocated to `reviews/scripts/`;
+     confirm path/args before running) to update the status in SQLite
+     and move the `Included` to `pending_full_text` (or the corresponding
+     status per the schema).
+  4. After the import, start **full-text (FT) screening** on the included
+     records.
+  5. Remember the task already recorded in memory: after the T/A
+     consensus, export RIS of the `Included` for a Paperpile full-text
+     catalog.
 
-## 2026-09-13 — Consenso de conflictos T/A R1 vs R2 (105 discrepancias)
+## 2026-09-13 — T/A conflict consensus R1 vs R2 (105 discrepancies)
 
-- Reglas de consenso acordadas con el usuario antes de resolver:
-  1. **Radiómica sin algoritmo de selección de features tipo ML explícito**
-     (p. ej. solo regresión logística/Cox, sin LASSO/RF/mRMR/red neuronal
-     nombrado): se decide por criterio propio que **cuenta como IA/ML** —
-     la extracción/selección radiómica en sí satisface el Concepto del
-     protocolo (coincide con `radiomics[tiab]` como término del bloque
-     IA/ML en la ecuación de búsqueda). Extendido por analogía a
-     "patómica" (heterogeneidad nuclear cuantitativa, REC-000387) y a
-     pipelines algorítmicos de descubrimiento multiómico sin ML
-     supervisado clásico (DEPTH, WGCNA/limma/Mfuzz: REC-000073, -000237).
-  2. **REC-AIBIOGU-000678** (coautoría Chaux, nota de COI explícita en el
-     HANDOFF): resuelto por decisión explícita del usuario como
-     **`Excluded`/`wrong intervention`** — la IA correlaciona PD-L1/CD8
-     (biomarcadores ya establecidos) sin derivar uno nuevo. Documentado
-     como decisión de consenso por el COI, no por desempate automático.
-     REC-AIBIOGU-000686 (también coautoría Chaux) ya era concordante
-     (`Excluded` ambos revisores), sin conflicto que resolver.
-  3. **Resto de los 105 conflictos:** resueltos caso por caso aplicando la
-     "regla de oro" del HANDOFF-R2 (¿la IA deriva/prioriza un biomarcador
-     nuevo, o solo reusa/clasifica/segmenta uno ya establecido?), con
-     apoyo de las notas de ambos revisores. Reglas internas de
-     consistencia notables:
-     - Estudios pan-cáncer con hallazgo específico reportado para un sitio
-       GU (vejiga, riñón) → `Included`; sin resultado específico por sitio
-       → `Excluded`/`wrong population` (REC-000188, -240, -265, -424).
-     - Paneles de índices inflamatorios/inmunes ya ampliamente establecidos
-       en oncología general (NLR, SII, PLR, AGR, DRR, etc.) combinados por
-       LASSO/RSF/Cox → `Excluded`/`wrong intervention` (cluster REC-000217,
-       -325, -357, -396, -534), salvo REC-000141 (subpoblaciones
-       linfocitarias funcionales, no estandarizadas, ML prioriza 9/42
-       candidatas) → `Included`.
-     - Desenlaces de toxicidad por quimioterapia (ototoxicidad,
-       nefrotoxicidad, síndrome metabólico) → `Excluded`/`wrong outcome`
-       (cluster REC-000588, -610, -624).
-     - Cuantificación automatizada de biomarcadores ya establecidos por
-       histopatología digital sin biomarcador nuevo (PTEN, Ki67/LSD1,
-       PD-L1/CD8, invasión linfovascular) → `Excluded`/`wrong intervention`
-       (REC-000145, -607, -618, -621, -678).
-     - Revisiones muy relevantes marcadas `Maybe` por ambos criterios o por
-       uno de los dos → consenso `Maybe` (contexto/rastreo de referencias,
-       no como estudio incluido): REC-000012, -018, -020, -138, -194,
+- Consensus rules agreed with the user before resolving:
+  1. **Radiomics without an explicit ML-type feature-selection algorithm**
+     (e.g. only logistic/Cox regression, without a named LASSO/RF/mRMR/
+     neural network): decided by own judgment that it **counts as
+     AI/ML** — the radiomic extraction/selection itself satisfies the
+     protocol's Concept (matches `radiomics[tiab]` as a term in the
+     AI/ML block of the search equation). Extended by analogy to
+     "pathomics" (quantitative nuclear heterogeneity, REC-000387) and to
+     algorithmic multiomic discovery pipelines without classic
+     supervised ML (DEPTH, WGCNA/limma/Mfuzz: REC-000073, -000237).
+  2. **REC-AIBIOGU-000678** (Chaux co-authorship, explicit COI note in
+     the HANDOFF): resolved by the user's explicit decision as
+     **`Excluded`/`wrong intervention`** — the AI correlates PD-L1/CD8
+     (already-established biomarkers) without deriving a new one.
+     Documented as a consensus decision due to the COI, not automatic
+     tie-breaking. REC-AIBIOGU-000686 (also Chaux co-authorship) was
+     already concordant (`Excluded` by both reviewers), with no conflict
+     to resolve.
+  3. **Remaining 105 conflicts:** resolved case by case applying the
+     "golden rule" from HANDOFF-R2 (does the AI derive/prioritize a new
+     biomarker, or only reuse/classify/segment an already-established
+     one?), supported by both reviewers' notes. Notable internal
+     consistency rules:
+     - Pan-cancer studies with a site-specific finding reported for a GU
+       site (bladder, kidney) → `Included`; without a site-specific
+       result → `Excluded`/`wrong population` (REC-000188, -240, -265,
+       -424).
+     - Panels of inflammatory/immune indices already widely established
+       in general oncology (NLR, SII, PLR, AGR, DRR, etc.) combined via
+       LASSO/RSF/Cox → `Excluded`/`wrong intervention` (cluster
+       REC-000217, -325, -357, -396, -534), except REC-000141 (functional
+       lymphocyte subpopulations, not standardized, ML prioritizes 9/42
+       candidates) → `Included`.
+     - Chemotherapy toxicity outcomes (ototoxicity, nephrotoxicity,
+       metabolic syndrome) → `Excluded`/`wrong outcome` (cluster
+       REC-000588, -610, -624).
+     - Automated quantification of already-established biomarkers via
+       digital histopathology without a new biomarker (PTEN, Ki67/LSD1,
+       PD-L1/CD8, lymphovascular invasion) → `Excluded`/`wrong
+       intervention` (REC-000145, -607, -618, -621, -678).
+     - Highly relevant reviews marked `Maybe` by both criteria or by one
+       of the two → consensus `Maybe` (context/reference tracking, not
+       as an included study): REC-000012, -018, -020, -138, -194,
        -258, -491, -623, -629, -697.
-     - Duplicados detectados dentro del propio corpus, marcados para
-       deduplicar en texto completo: REC-000161/-000642 (mismo estudio DWI
-       radiómica), REC-000496/-000668 (mismo estudio CT multifásico ccRCC).
-- Archivo de resolución: `screening/conflicts/2026-09-13__consenso-TA-R1-R2.csv`
-  (105 filas: `consensus_decision`, `consensus_exclusion_reason`,
-  `consensus_rationale` por registro).
-- **Resultado del consenso (105):** Included 52 / Excluded 33 / Maybe 20.
-- **Totales finales T/A (697 = 592 concordantes + 105 consensuados):**
-  concordantes Included 477 / Excluded 100 / Maybe 15; **finales: Included
+     - Duplicates detected within the corpus itself, marked for
+       deduplication at full text: REC-000161/-000642 (same DWI
+       radiomics study), REC-000496/-000668 (same multiphase CT ccRCC
+       study).
+- Resolution file: `screening/conflicts/2026-09-13__consenso-TA-R1-R2.csv`
+  (105 rows: `consensus_decision`, `consensus_exclusion_reason`,
+  `consensus_rationale` per record).
+- **Consensus result (105):** Included 52 / Excluded 33 / Maybe 20.
+- **Final T/A totals (697 = 592 concordant + 105 consensus):**
+  concordant Included 477 / Excluded 100 / Maybe 15; **final: Included
   529 / Excluded 133 / Maybe 35.**
 
-## 2026-09-15 — Catálogo RIS para Paperpile exportado
+## 2026-09-15 — RIS catalog for Paperpile exported
 
 - `python3 reviews/scripts/export_full_text_ris.py --review reviews/AIBIO_GU`
   (default `--status pending_retrieval`) →
   `screening/full_text/2026-09-15__full-text-catalog.ris`.
-- **536 registros, 536 con DOI, 0 sin DOI** (coincide con los 536 `Included`
-  del consenso importados el 2026-09-13).
-- **Pendiente:** enviar el RIS al usuario para import en Paperpile
-  (identificación + descarga automatizada de PDF por DOI). Al volver
-  `paperpile-files.zip`, reingresar con
+- **536 records, 536 with DOI, 0 without DOI** (matches the 536 `Included`
+  from the consensus imported on 2026-09-13).
+- **Pending:** send the RIS to the user for import into Paperpile
+  (identification + automated PDF download by DOI). Upon return of
+  `paperpile-files.zip`, re-ingest with
   `python3 reviews/scripts/ingest_paperpile_full_texts.py --review reviews/AIBIO_GU --zip ~/Downloads/paperpile-files.zip`
-  y reexportar para la 2ª pasada de los pendientes.
+  and re-export for the 2nd pass of pending records.
 
-## 2026-09-13 — Ajuste a consenso binario e importación a SQLite
+## 2026-09-13 — Adjustment to binary consensus and import to SQLite
 
-- `import_ta_screening_decisions.py` (`reviews/scripts/`) exige que la
-  columna `consensus` sea **binaria** (`Included`/`Excluded`; ver línea
-  167-168 del script) — no acepta `Maybe` como decisión final de consenso,
-  igual que el precedente de HPV_PSCC (`consenso-TA-screening.csv` allí
-  también forzó los `Maybe` a binario). Además el importador exige que el
-  CSV de consenso cubra los **697** registros (no solo los 105 conflictos):
-  se detectaron **15 registros adicionales** donde R1 y R2 coincidieron en
-  `Maybe` (concordantes, por eso no aparecían en el archivo de conflictos)
-  que también requerían resolución binaria.
-- **Resolución de los 35 `Maybe` totales** (20 del archivo de conflictos +
-  15 concordantes), aplicando el mismo marco de reglas:
-  - **Revisiones muy relevantes → `Excluded`/`wrong publication type`**
-    (contexto/rastreo de referencias, no estudio incluido, por regla
-    explícita del HANDOFF): REC-000012, -018, -020, -040, -102, -138,
+- `import_ta_screening_decisions.py` (`reviews/scripts/`) requires the
+  `consensus` column to be **binary** (`Included`/`Excluded`; see lines
+  167-168 of the script) — it does not accept `Maybe` as a final consensus
+  decision, matching the HPV_PSCC precedent (`consenso-TA-screening.csv`
+  there also forced the `Maybe` to binary). The importer also requires
+  the consensus CSV to cover all **697** records (not just the 105
+  conflicts): **15 additional records** were found where R1 and R2 agreed
+  on `Maybe` (concordant, which is why they did not appear in the
+  conflicts file) and which also required binary resolution.
+- **Resolution of the 35 total `Maybe`** (20 from the conflicts file +
+  15 concordant), applying the same rule framework:
+  - **Highly relevant reviews → `Excluded`/`wrong publication type`**
+    (context/reference tracking, not an included study, per explicit
+    HANDOFF rule): REC-000012, -018, -020, -040, -102, -138,
     -148, -194, -258, -268, -274, -372, -373, -491, -566, -569, -585,
-    -623, -629, -697 (20 revisiones).
-  - **`Included` (enviados a verificación de texto completo)** por
-    biomarcador candidato plausible o falta de información suficiente
-    para excluir a nivel de título/abstract: REC-000017, -036, -103,
-    -461, -502, -574, -590 (7 registros).
-  - **`Excluded` por motivo específico** (no revisión): REC-000106/-640
-    (mismo estudio; variables finales del nomograma son clínicas, no
-    radiómicas — `wrong intervention`), REC-000128 (ML real pero
-    desenlace fuera del marco PCC — `wrong outcome`), REC-000233
-    (solo estadística univariada, sin firma/score — `wrong
-    intervention`), REC-000248 (abstract no describe biomarcador ni IA/ML
-    pese al título — `wrong intervention`), REC-000445 (predice VEGF ya
-    establecido — `wrong intervention`), REC-000539 (sin métrica
-    reportada para los candidatos renales — `wrong outcome`), REC-000613
-    (solo pruebas t múltiples, sin firma compuesta — `wrong
-    intervention`) (8 registros).
-  - Detalle completo con justificación por registro en
-    `screening/conflicts/2026-09-13__consenso-TA-final-697.csv` (697 filas,
-    columnas `record_id`, `consensus`, `exclusion_reason`, `note`) y en
-    `2026-09-13__consenso-TA-R1-R2.csv` (105 conflictos, actualizado con
-    resolución binaria).
-  - Nota abierta: REC-000445 y REC-000461 (nefroblastoma/tumor de Wilms)
-    comparten una duda de encaje poblacional no resuelta formalmente por
-    el protocolo (neoplasia renal pediátrica embrionaria, no RCC); 000445
-    se excluyó por motivo de intervención independiente de esa duda,
-    000461 se envía a texto completo con la duda documentada para
-    resolver en extracción/síntesis.
-- **Totales finales T/A revisados: Included 536 / Excluded 161** (ajustado
-  desde el reporte previo de 529/133/35, que incluía 35 `Maybe` no
-  válidos para el importador).
-- Backup de la base previo a la importación:
-  `scratchpad/reviews.sqlite.bak-pre-ta-consensus-2026-09-13` (sesión).
-- **Importación ejecutada:**
+    -623, -629, -697 (20 reviews).
+  - **`Included` (sent for full-text verification)** for a plausible
+    candidate biomarker or insufficient information to exclude at
+    title/abstract level: REC-000017, -036, -103,
+    -461, -502, -574, -590 (7 records).
+  - **`Excluded` for a specific reason** (not a review): REC-000106/-640
+    (same study; the nomogram's final variables are clinical, not
+    radiomic — `wrong intervention`), REC-000128 (real ML but outcome
+    outside the PCC framework — `wrong outcome`), REC-000233
+    (only univariate statistics, no signature/score — `wrong
+    intervention`), REC-000248 (abstract describes no biomarker or AI/ML
+    despite the title — `wrong intervention`), REC-000445 (predicts
+    already-established VEGF — `wrong intervention`), REC-000539 (no
+    metric reported for the renal candidates — `wrong outcome`),
+    REC-000613 (only multiple t-tests, no composite signature — `wrong
+    intervention`) (8 records).
+  - Full detail with per-record justification in
+    `screening/conflicts/2026-09-13__consenso-TA-final-697.csv` (697
+    rows, columns `record_id`, `consensus`, `exclusion_reason`, `note`)
+    and in `2026-09-13__consenso-TA-R1-R2.csv` (105 conflicts, updated
+    with the binary resolution).
+  - Open note: REC-000445 and REC-000461 (nephroblastoma/Wilms tumor)
+    share a population-fit doubt not formally resolved by the protocol
+    (embryonal pediatric renal neoplasm, not RCC); 000445 was excluded
+    for an intervention reason independent of that doubt, 000461 is sent
+    to full text with the doubt documented to be resolved at
+    extraction/synthesis.
+- **Final reviewed T/A totals: Included 536 / Excluded 161** (adjusted
+  from the previous report of 529/133/35, which included 35 `Maybe` not
+  valid for the importer).
+- Database backup prior to import:
+  `scratchpad/reviews.sqlite.bak-pre-ta-consensus-2026-09-13` (session).
+- **Import executed:**
   `python3 reviews/scripts/import_ta_screening_decisions.py --review
   reviews/AIBIO_GU --r1-csv .../2026-09-09__cribado-R1-chaux-COMPLETO.csv
   --r2-csv .../2026-09-09__cribado-COMPLETO.csv --consensus-csv
   .../2026-09-13__consenso-TA-final-697.csv --decision-date 2026-09-13`.
-  `import_batch_id=IMP-SR-AIBIO-GU-2026-09-13-TA-SCREEN`. Resultado:
+  `import_batch_id=IMP-SR-AIBIO-GU-2026-09-13-TA-SCREEN`. Result:
   `updated_r1=697 updated_r2=697 consensus_inserted=697`;
   `full_texts pending_retrieval=536 not_required=161`; `pending_r1_r2_left=0`.
-- **Pendiente:**
-  1. Exportar RIS de los 536 `Included` para catálogo Paperpile de texto
-     completo (tarea ya registrada en memoria).
-  2. Iniciar cribado de texto completo (FT) sobre los 536 `Included`
-     (`pending_retrieval` en `full_texts`).
-  3. Canal C (rastreo de citas) sobre las revisiones excluidas por
-     `wrong publication type` y sobre los `Included` finales, tras el
-     cribado FT.
+- **Pending:**
+  1. Export RIS of the 536 `Included` for a Paperpile full-text catalog
+     (task already recorded in memory).
+  2. Start full-text (FT) screening on the 536 `Included`
+     (`pending_retrieval` in `full_texts`).
+  3. Channel C (citation tracking) on reviews excluded for `wrong
+     publication type` and on the final `Included`, after FT screening.
 
-## 2026-09-13 — Cierre de sesión: cribado T/A cerrado, próximos pasos
+## 2026-09-13 — Session close: T/A screening closed, next steps
 
-**Estado del ciclo:** cribado título/abstract **cerrado** en SQLite para los
-697 registros del corpus combinado (PubMed + Europe PMC). Fase actual:
-recuperación y cribado de **texto completo (FT)**.
+**Cycle status:** title/abstract screening **closed** in SQLite for the
+697 records of the combined corpus (PubMed + Europe PMC). Current phase:
+**full-text (FT)** retrieval and screening.
 
-**Próximos pasos, en orden:**
+**Next steps, in order:**
 
-1. **Exportar catálogo RIS de los 536 `Included`** para Paperpile (tarea
-   registrada en memoria del usuario: "tras el consenso T/A, exportar RIS
-   de los Included para catálogo Paperpile de texto completo"). Los
-   registros a exportar son los que quedaron con
-   `full_texts.retrieval_status = 'pending_retrieval'` tras el batch
+1. **Export the RIS catalog of the 536 `Included`** for Paperpile (task
+   recorded in the user's memory: "after the T/A consensus, export RIS of
+   the Included for the full-text Paperpile catalog"). The records to
+   export are those left with
+   `full_texts.retrieval_status = 'pending_retrieval'` after batch
    `IMP-SR-AIBIO-GU-2026-09-13-TA-SCREEN`.
-2. **Recuperar el texto completo** de esos 536 registros (PDF/HTML según
-   disponibilidad; preprints incluidos por regla del protocolo, con
-   sustitución por la versión publicada si aparece durante FT).
-3. **Cribado de texto completo doble** (R1 `REV-ALCIDES` / R2
-   `REV-PAOLA`), con motivos de exclusión controlados
-   (`exclusion_reasons`), igual estructura que el cribado T/A
-   (planillas ciegas → conflictos → consenso documentado → import a
+2. **Retrieve the full text** of those 536 records (PDF/HTML depending on
+   availability; preprints included per the protocol rule, with
+   substitution by the published version if it appears during FT).
+3. **Double full-text screening** (R1 `REV-ALCIDES` / R2
+   `REV-PAOLA`), with controlled exclusion reasons
+   (`exclusion_reasons`), same structure as T/A screening
+   (blinded spreadsheets → conflicts → documented consensus → import to
    SQLite).
-4. **Puntos a resolver explícitamente durante el FT**, ya señalados en el
-   consenso T/A y que no deben perderse:
-   - Los **10 registros enviados a FT por ambigüedad de contenido/método**
-     en vez de decidirse a nivel de abstract: REC-AIBIOGU-000017, -036,
-     -103, -461, -502, -574, -590 (más -161/-000642 y -496/-000668, que
-     además son **duplicados internos** del corpus a fusionar en FT).
-   - **REC-AIBIOGU-000461** (tumor de Wilms): confirmar si encaja en la
-     definición de Población del protocolo (neoplasia renal pediátrica
-     embrionaria, no carcinoma de células renales) antes de extraerlo
-     como incluido definitivo.
-   - Verificar en FT si alguno de los `Included` por la regla "radiómica
-     cuenta como IA/ML sin algoritmo de selección explícito" (criterio
-     adoptado en esta sesión, ver entrada de consenso arriba) debería
-     reclasificarse al leer la metodología completa — esta regla se
-     aplicó a nivel de título/abstract y es más laxa que exigir un
-     algoritmo ML nombrado; el FT es el lugar natural para confirmarla o
-     corregirla estudio por estudio.
-   - Las **20 revisiones** excluidas por `wrong publication type` pero
-     marcadas como "muy relevantes" (contexto/rastreo de referencias) se
-     reservan para **Canal C** (rastreo de citas hacia atrás/adelante),
-     no se descartan del todo.
-5. **Canal C (rastreo de citas):** ejecutar tras cerrar el cribado FT,
-   sobre los estudios incluidos definitivos y sobre las revisiones del
-   punto anterior, según lo ya definido en el protocolo.
-6. Tras cerrar FT + appraisal (MMAT/PROBAST-TRIPOD-AI) + extracción:
-   exportar paquete de handoff con
+4. **Points to resolve explicitly during FT**, already flagged in the T/A
+   consensus and not to be lost:
+   - The **10 records sent to FT due to content/method ambiguity**
+     instead of being decided at abstract level: REC-AIBIOGU-000017, -036,
+     -103, -461, -502, -574, -590 (plus -161/-000642 and -496/-000668,
+     which are additionally **internal duplicates** of the corpus to be
+     merged at FT).
+   - **REC-AIBIOGU-000461** (Wilms tumor): confirm whether it fits the
+     protocol's Population definition (embryonal pediatric renal
+     neoplasm, not renal cell carcinoma) before extracting it as a
+     definitive include.
+   - Verify at FT whether any of the `Included` under the rule
+     "radiomics counts as AI/ML without an explicit selection algorithm"
+     (criterion adopted in this session, see the consensus entry above)
+     should be reclassified upon reading the full methodology — this rule
+     was applied at title/abstract level and is more lenient than
+     requiring a named ML algorithm; FT is the natural place to confirm
+     or correct it study by study.
+   - The **20 reviews** excluded for `wrong publication type` but marked
+     as "highly relevant" (context/reference tracking) are reserved for
+     **Channel C** (backward/forward citation tracking), not discarded
+     entirely.
+5. **Channel C (citation tracking):** run after closing FT screening,
+   over the definitive included studies and over the reviews from the
+   previous point, per the protocol's definition.
+6. After closing FT + appraisal (MMAT/PROBAST-TRIPOD-AI) + extraction:
+   export the handoff package with
    `python3 scripts/export_handoff_sesion2.py --review reviews/AIBIO_GU`
-   para que REDACTOR Sesión 2 redacte el manuscrito.
+   so that REDACTOR Session 2 can draft the manuscript.
 
-**No pendiente / ya resuelto en esta sesión:** cribado T/A R1 y R2
-completos, kappa calculado (0.637, acuerdo sustancial), 105 conflictos +
-15 concordantes-`Maybe` resueltos por consenso documentado (incluye
-REC-AIBIOGU-000678 por COI de coautoría Chaux), importación a SQLite
-verificada (`pending_r1_r2_left=0`).
+**Not pending / already resolved in this session:** T/A screening R1 and
+R2 complete, kappa calculated (0.637, substantial agreement), 105
+conflicts + 15 concordant-`Maybe` resolved by documented consensus
+(includes REC-AIBIOGU-000678 due to Chaux co-authorship COI), SQLite
+import verified (`pending_r1_r2_left=0`).
 
-## 2026-09-21 — Appraisal andamiaje + pilot
+## 2026-09-21 — Appraisal scaffolding + pilot
 
-1. Fase post-FT: consenso final 400 Included / 36 Excluded ya en SQLite.
-2. Creado codebook + planilla 400 + pilot estratificado n=20 en
+1. Post-FT phase: final consensus 400 Included / 36 Excluded already in
+   SQLite.
+2. Created codebook + 400-row spreadsheet + stratified pilot n=20 in
    `risk_of_bias/`.
-3. Pilot completado (4 lotes paralelos A–D → fusionados a
-   `AIBIO_GU_appraisal_PILOT_20.csv`). Resumen y calibración en
-   `AIBIO_GU_appraisal_PILOT_SUMMARY.md` y `decision-log.md`.
-4. **Estado:** codebook congelado post-pilot. **Siguiente:** escala
-   appraisal 380 restantes → extracción → Canal C → handoff Sesión 2.
-5. Extracciones temporales de PDF en `risk_of_bias/pilot_txt/`
+3. Pilot completed (4 parallel batches A–D → merged into
+   `AIBIO_GU_appraisal_PILOT_20.csv`). Summary and calibration in
+   `AIBIO_GU_appraisal_PILOT_SUMMARY.md` and `decision-log.md`.
+4. **Status:** codebook frozen post-pilot. **Next:** scale-up appraisal of
+   the remaining 380 → extraction → Channel C → handoff to Session 2.
+5. Temporary PDF extractions in `risk_of_bias/pilot_txt/`
    (gitignored).
 
-## 2026-09-22 — Appraisal: escala 380 + consolidación 400 + import SQLite
+## 2026-09-22 — Appraisal: scale-up 380 + consolidation 400 + SQLite import
 
-1. Escala ejecutada en 8 lotes paralelos (`risk_of_bias/batches/`,
-   ~47-48 registros c/u) por agentes IA sobre PDF completo. 380/380
-   filas completadas, 0 `cannot_appraise`.
-2. Al fusionar piloto+lotes se detectó y corrigió una inconsistencia de
-   calibración MMAT (regla escrita del codebook vs. práctica real del
-   piloto) — ver `decision-log.md` para el detalle y la resolución
-   (regla mecánica congelada, 46/400 filas recalificadas). También se
-   normalizó `probast_overall_applicability` y se corrigió 1 fila con
-   corrimiento de columna.
-3. Consolidado en `risk_of_bias/AIBIO_GU_appraisal_FULL_400.csv` (400
-   únicos, sin duplicados, 0 blancos en `mmat_overall`).
-4. Importado a SQLite: 400 `studies` + `study_records` (1:1) + 7978
-   `risk_of_bias` (MMAT_v2018/PROBAST/TRIPOD-AI) vía
+1. Scale-up executed in 8 parallel batches (`risk_of_bias/batches/`,
+   ~47-48 records each) by AI agents over the full PDF. 380/380
+   rows completed, 0 `cannot_appraise`.
+2. When merging pilot+batches, an MMAT calibration inconsistency was
+   detected and corrected (the codebook's written rule vs. the pilot's
+   actual practice) — see `decision-log.md` for detail and resolution
+   (mechanical rule frozen, 46/400 rows reclassified). Also normalized
+   `probast_overall_applicability` and corrected 1 row with a column
+   shift.
+3. Consolidated into `risk_of_bias/AIBIO_GU_appraisal_FULL_400.csv` (400
+   unique, no duplicates, 0 blanks in `mmat_overall`).
+4. Imported to SQLite: 400 `studies` + `study_records` (1:1) + 7978
+   `risk_of_bias` rows (MMAT_v2018/PROBAST/TRIPOD-AI) via
    `reviews/scripts/import_aibio_gu_appraisal.py`.
-5. **Estado: appraisal cerrado.** **Siguiente:** extracción de datos
-   sobre los 400 Included.
+5. **Status: appraisal closed.** **Next:** data extraction over the 400
+   Included.

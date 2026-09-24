@@ -1,5 +1,5 @@
 # Data quality log — AIBIO_GU
 
-## 2026-09-09 — Estado inicial
+## 2026-09-09 — Initial status
 
-- Sin validaciones ejecutadas todavía.
+- No validations run yet.

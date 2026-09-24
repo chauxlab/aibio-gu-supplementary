@@ -1,51 +1,51 @@
-# Síntesis de mapeo — AIBIO_GU
+# Mapping synthesis — AIBIO_GU
 
-Fecha: 2026-09-23. Corpus: 507 estudios con texto (400 de la búsqueda en bases y 107 de Canal C). Extracción: 338 `complete`, 169 `needs_review`. Sin metaanálisis.
+Date: 2026-09-23. Corpus: 507 studies with text (400 from database searching and 107 from Channel C). Extraction: 338 `complete`, 169 `needs_review`. No meta-analysis.
 
-## Reducción
+## Reduction
 
-El corpus se concentra en tres sitios y dos modalidades. Riñón 181, próstata 174 y urotelio/vejiga 133 suman 488 de 507. Testículo aporta 13, pene 1 (`REC-AIBIOGU-000677`), un estudio abarca los tres subtipos de carcinoma renal (`REC-AIBIOGU-000544`) y 4 son pan-cáncer con un componente genitourinario.
+The corpus is concentrated in three sites and two modalities. Kidney 181, prostate 174, and urothelium/bladder 133 add up to 488 of 507. Testis contributes 13, penis 1 (`REC-AIBIOGU-000677`), one study covers all three renal carcinoma subtypes (`REC-AIBIOGU-000544`), and 4 are pan-cancer with a genitourinary component.
 
-La modalidad dominante es imagen radiológica (217) y transcriptómica (164). Siguen multiómica (66), patología digital (23), otras (19), proteómica (8), metilación (6) y genómica (4).
+The dominant modality is radiological imaging (217) and transcriptomics (164). Next are multiomics (66), digital pathology (23), other (19), proteomics (8), methylation (6), and genomics (4).
 
-El propósito clínico es pronóstico en 258, diagnóstico en 187, estratificación de riesgo en 21, predicción de respuesta en 19, subtipado en 17 y otro en 5.
+The clinical purpose is prognostic in 258, diagnostic in 187, risk stratification in 21, response prediction in 19, subtyping in 17, and other in 5.
 
-## Despliegue: sitio × modalidad
+## Deployment: site × modality
 
-| Sitio | Radiología | Transcriptómica | Multiómica | Patología digital | Otra | Proteómica | Metilación | Genómica | Total |
+| Site | Radiology | Transcriptomics | Multiomics | Digital pathology | Other | Proteomics | Methylation | Genomics | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Riñón | 75 | 62 | 29 | 5 | 5 | 1 | 1 | 3 | 181 |
-| Próstata | 86 | 48 | 17 | 8 | 6 | 6 | 2 | 1 | 174 |
-| Urotelio/vejiga | 47 | 52 | 16 | 9 | 5 | 1 | 3 | 0 | 133 |
-| Testículo | 9 | 0 | 2 | 1 | 1 | 0 | 0 | 0 | 13 |
-| Otro / pan-cáncer | 0 | 1 | 1 | 0 | 2 | 0 | 0 | 0 | 4 |
-| Pene | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
-| Múltiple (subtipos renales) | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| Kidney | 75 | 62 | 29 | 5 | 5 | 1 | 1 | 3 | 181 |
+| Prostate | 86 | 48 | 17 | 8 | 6 | 6 | 2 | 1 | 174 |
+| Urothelium/bladder | 47 | 52 | 16 | 9 | 5 | 1 | 3 | 0 | 133 |
+| Testis | 9 | 0 | 2 | 1 | 1 | 0 | 0 | 0 | 13 |
+| Other / pan-cancer | 0 | 1 | 1 | 0 | 2 | 0 | 0 | 0 | 4 |
+| Penis | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| Multiple (renal subtypes) | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Total | 217 | 164 | 66 | 23 | 19 | 8 | 6 | 4 | 507 |
 
-## Despliegue: sitio × propósito
+## Deployment: site × purpose
 
-| Sitio | Pronóstico | Diagnóstico | Riesgo | Respuesta | Subtipado | Otro | Total |
+| Site | Prognostic | Diagnostic | Risk | Response | Subtyping | Other | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Riñón | 106 | 57 | 5 | 4 | 6 | 3 | 181 |
-| Próstata | 78 | 74 | 12 | 5 | 4 | 1 | 174 |
-| Urotelio/vejiga | 71 | 43 | 4 | 9 | 5 | 1 | 133 |
-| Testículo | 1 | 11 | 0 | 0 | 1 | 0 | 13 |
-| Otro / pan-cáncer | 2 | 1 | 0 | 1 | 0 | 0 | 4 |
-| Pene | 0 | 1 | 0 | 0 | 0 | 0 | 1 |
-| Múltiple (subtipos renales) | 0 | 0 | 0 | 0 | 1 | 0 | 1 |
+| Kidney | 106 | 57 | 5 | 4 | 6 | 3 | 181 |
+| Prostate | 78 | 74 | 12 | 5 | 4 | 1 | 174 |
+| Urothelium/bladder | 71 | 43 | 4 | 9 | 5 | 1 | 133 |
+| Testis | 1 | 11 | 0 | 0 | 1 | 0 | 13 |
+| Other / pan-cancer | 2 | 1 | 0 | 1 | 0 | 0 | 4 |
+| Penis | 0 | 1 | 0 | 0 | 0 | 0 | 1 |
+| Multiple (renal subtypes) | 0 | 0 | 0 | 0 | 1 | 0 | 1 |
 | Total | 258 | 187 | 21 | 19 | 17 | 5 | 507 |
 
-## Comparación
+## Comparison
 
-La imagen pesa más en próstata (86/174) y riñón (75/181). En urotelio la transcriptómica (52) supera a la radiología (47). El testículo es casi solo diagnóstico por imagen (9 de 13 radiológicos; 11 de 13 diagnósticos). La predicción de respuesta es el propósito más delgado en los tres sitios grandes (9 vejiga, 5 próstata, 4 riñón).
+Imaging carries the most weight in prostate (86/174) and kidney (75/181). In urothelium, transcriptomics (52) exceeds radiology (47). Testis is almost exclusively imaging diagnosis (9 of 13 radiological; 11 of 13 diagnostic). Response prediction is the thinnest purpose across the three large sites (9 bladder, 5 prostate, 4 kidney).
 
-Validación del número que sostiene el desempeño: cohorte externa 206, multicéntrica externa 52, hold-out interno 142, validación cruzada 61, un solo split 38, ninguna 7, utilidad clínica demostrada 1 (`REC-AIBIOGU-000451`). Hay alguna validación externa en 258 de 507.
+Validation of the number underlying performance: external cohort 206, external multicenter 52, internal hold-out 142, cross-validation 61, single split 38, none 7, demonstrated clinical utility 1 (`REC-AIBIOGU-000451`). Some external validation is present in 258 of 507.
 
-Código disponible en 21, a pedido en 4, no disponible en 3, no reportado en 479. Datos disponibles en 77, a pedido en 64, no disponibles en 4, no reportados en 362. Guía de reporte declarada en 15 (TRIPOD 7, TRIPOD-AI 1, STARD 1, CLAIM 1, otra 5); 492 no declaran ninguna.
+Code available in 21, upon request in 4, not available in 3, not reported in 479. Data available in 77, upon request in 64, not available in 4, not reported in 362. Reporting guideline declared in 15 (TRIPOD 7, TRIPOD-AI 1, STARD 1, CLAIM 1, other 5); 492 declare none.
 
-MMAT global (n=507): bajo 317, moderado 177, alto 13. PROBAST riesgo global: alto 463, unclear 42. Dos estudios no tienen bloque PROBAST ni TRIPOD-AI (`REC-AIBIOGU-000079`, `REC-AIBIOGU-000502`). TRIPOD-AI en los 505 restantes: adecuado 236, parcial 263, inadecuado 6.
+Overall MMAT (n=507): low 317, moderate 177, high 13. PROBAST overall risk: high 463, unclear 42. Two studies have no PROBAST or TRIPOD-AI block (`REC-AIBIOGU-000079`, `REC-AIBIOGU-000502`). TRIPOD-AI in the remaining 505: adequate 236, partial 263, inadequate 6.
 
-## Conclusión
+## Conclusion
 
-Lo que la literatura ha producido es un mapa de firmas pronósticas y diagnósticas, sobre todo de imagen y transcriptómica, en riñón, próstata y urotelio. La preparación para traslación es estrecha: una sola utilidad clínica demostrada, el código casi nunca está disponible y el riesgo PROBAST es alto en 463 de los 505 juicios. Pene y testículo siguen siendo huecos de evidencia. Quedan fuera de este mapa 230 incluidos de Canal C sin PDF y 5 registros cuya elegibilidad no se pudo cerrar sin el texto.
+What the literature has produced is a map of prognostic and diagnostic signatures, mostly from imaging and transcriptomics, in kidney, prostate, and urothelium. Readiness for translation is narrow: a single demonstrated clinical utility, code is almost never available, and PROBAST risk is high in 463 of 505 judgments. Penis and testis remain evidence gaps. Left outside this map are 230 Channel C includes without a PDF and 5 records whose eligibility could not be closed without the text.

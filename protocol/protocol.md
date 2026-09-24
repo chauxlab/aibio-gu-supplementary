@@ -1,118 +1,117 @@
-# Protocolo operativo — AIBIO_GU
+# Operating protocol — AIBIO_GU
 
-**Título:** Artificial Intelligence–Driven Biomarker Discovery in Genitourinary
+**Title:** Artificial Intelligence–Driven Biomarker Discovery in Genitourinary
 Oncology
 
-**Tipo de revisión:** Integrativa (Whittemore & Knafl)
-**Idioma del manuscrito:** Inglés
-**Marco utilizado:** PCC (Population – Concept – Context) con desenlaces
-declarados
-**Fecha de búsqueda:** 2026-09-09 (Canal A PubMed + Canal B Europe PMC)
+**Review type:** Integrative (Whittemore & Knafl)
+**Manuscript language:** English
+**Framework used:** PCC (Population – Concept – Context) with declared
+outcomes
+**Search date:** 2026-09-09 (Channel A PubMed + Channel B Europe PMC)
 **review_id:** `SR-AIBIO-GU` · **review_slug:** `AIBIO_GU`
-**Registro externo (OSF/PROSPERO):** No registrado. PROSPERO no aplica a
-revisiones integrativas. Se ofrece registro OSF opcional; `protocol_ref:
-pending` en `review.yaml` hasta que el usuario lo solicite.
+**External registration (OSF/PROSPERO):** Not registered. PROSPERO does not
+apply to integrative reviews. Optional OSF registration is offered;
+`protocol_ref: pending` in `review.yaml` until the user requests it.
 
-## Origen del expediente
+## Case origin
 
-Expediente nuevo, sin corpus previo en REDACTOR. La búsqueda se ejecutará
-desde este expediente mediante los conectores bibliográficos disponibles en
-sesión (PubMed/MEDLINE, Europe PMC vía Scite/Search) más un canal adicional
-para literatura ya conocida por el usuario si aplica ("identificados por
-otros métodos").
+New case, with no prior corpus in REDACTOR. The search will be run from
+this case via the bibliographic connectors available in the session
+(PubMed/MEDLINE, Europe PMC via Scite/Search) plus an additional channel
+for literature already known to the user, if applicable ("identified
+through other methods").
 
-## Justificación
+## Rationale
 
-El descubrimiento de biomarcadores en oncología genitourinaria (próstata,
-urotelio/vejiga, riñón, pene, testículo) ha incorporado de forma acelerada
-métodos de inteligencia artificial y aprendizaje automático: deep learning
-sobre patología digital (WSI, H&E, IHC), radiómica y modelos sobre imagen
-(mpMRI, TC, PET), y modelos de machine learning sobre datos genómicos,
-transcriptómicos, proteómicos y de metilación, así como integración
-multiómica. Falta una síntesis integrativa que mapee qué modalidades se han
-aplicado, a qué sitios tumorales, con qué propósito clínico (diagnóstico,
-pronóstico, predicción de respuesta), y con qué grado de validación y
-preparación para traslación clínica.
+Biomarker discovery in genitourinary oncology (prostate, urothelium/
+bladder, kidney, penis, testis) has rapidly incorporated artificial
+intelligence and machine learning methods: deep learning on digital
+pathology (WSI, H&E, IHC), radiomics and imaging models (mpMRI, CT, PET),
+and machine learning models on genomic, transcriptomic, proteomic, and
+methylation data, as well as multiomic integration. An integrative
+synthesis is lacking that maps which modalities have been applied, to
+which tumor sites, for what clinical purpose (diagnosis, prognosis,
+response prediction), and with what degree of validation and readiness
+for clinical translation.
 
-## Pregunta de revisión
+## Review question
 
-En pacientes con neoplasias genitourinarias, ¿qué biomarcadores se han
-descubierto o priorizado mediante métodos de inteligencia artificial /
-aprendizaje automático, sobre qué modalidades de datos, con qué propósito
-clínico, y cuál es el estado de su validación analítica y clínica?
+In patients with genitourinary neoplasms, which biomarkers have been
+discovered or prioritized using artificial intelligence / machine
+learning methods, on which data modalities, for what clinical purpose,
+and what is the status of their analytical and clinical validation?
 
 ## PCC
 
-- **P (Población):** Pacientes (o muestras/datos derivados de pacientes) con
-  neoplasias genitourinarias: carcinoma de próstata, carcinoma urotelial /
-  de vejiga, carcinoma de células renales, carcinoma escamocelular de pene,
-  y tumores de células germinales testiculares. Se admite investigación
-  traslacional con cohortes humanas y datos públicos de pacientes (TCGA,
-  CPTAC, etc.).
-- **C (Concepto):** Descubrimiento, identificación o priorización de
-  biomarcadores mediante inteligencia artificial o aprendizaje automático
-  —incluyendo deep learning, machine learning clásico, modelos de
-  fundación, y pipelines de IA para selección de variables— con el fin
-  explícito de derivar un biomarcador (molecular, histológico/morfológico,
-  radiómico, o firma multiómica).
-- **Contexto:** Cualquier modalidad de dato: patología digital / histología,
-  radiología / imagen médica, genómica, transcriptómica, proteómica,
-  epigenómica/metilación, y multiómica integrada. Cualquier entorno
-  (académico, multicéntrico, retrospectivo o prospectivo).
-- **Desenlaces (declarados):**
-  1. Biomarcador(es) descubierto(s) y su modalidad de dato.
-  2. Propósito clínico: diagnóstico, pronóstico, predicción de respuesta a
-     terapia, estratificación de riesgo, otros.
-  3. Método de IA/ML empleado y datos de entrada.
-  4. Desempeño reportado (AUC, C-index, HR, sensibilidad/especificidad,
-     según corresponda).
-  5. Nivel de validación: interna (hold-out, validación cruzada), externa
-     (cohorte independiente), o utilidad clínica demostrada.
-  6. Disponibilidad de código/datos y adherencia a guías de reporte
+- **P (Population):** Patients (or patient-derived samples/data) with
+  genitourinary neoplasms: prostate carcinoma, urothelial / bladder
+  carcinoma, renal cell carcinoma, penile squamous cell carcinoma, and
+  testicular germ cell tumors. Translational research with human cohorts
+  and public patient data (TCGA, CPTAC, etc.) is admitted.
+- **C (Concept):** Discovery, identification, or prioritization of
+  biomarkers using artificial intelligence or machine learning —
+  including deep learning, classic machine learning, foundation models,
+  and AI pipelines for feature selection — with the explicit aim of
+  deriving a biomarker (molecular, histological/morphological, radiomic,
+  or multiomic signature).
+- **Context:** Any data modality: digital pathology / histology,
+  radiology / medical imaging, genomics, transcriptomics, proteomics,
+  epigenomics/methylation, and integrated multiomics. Any setting
+  (academic, multicenter, retrospective, or prospective).
+- **Outcomes (declared):**
+  1. Discovered biomarker(s) and their data modality.
+  2. Clinical purpose: diagnostic, prognostic, treatment response
+     prediction, risk stratification, other.
+  3. AI/ML method used and input data.
+  4. Reported performance (AUC, C-index, HR, sensitivity/specificity,
+     as applicable).
+  5. Level of validation: internal (hold-out, cross-validation), external
+     (independent cohort), or demonstrated clinical utility.
+  6. Availability of code/data and adherence to reporting guidelines
      (TRIPOD-AI, CLAIM, DECIDE-AI, etc.).
 
-## Criterios de elegibilidad
+## Eligibility criteria
 
-### Inclusión
+### Inclusion
 
-- Estudios primarios (retrospectivos o prospectivos) y estudios
-  traslacionales con cohortes humanas o datos de pacientes.
-- Uso explícito de IA/ML como parte del proceso de descubrimiento o
-  priorización del biomarcador.
-- Neoplasia genitourinaria según la definición de Población.
-- Reporta al menos un biomarcador candidato con alguna métrica de desempeño
-  o asociación con desenlace clínico.
-- Publicado en inglés (u otro idioma si hay texto completo evaluable; se
-  documentará).
-- Sin límite inferior de fecha; se documentará la ventana efectiva tras la
-  búsqueda.
+- Primary studies (retrospective or prospective) and translational
+  studies with human cohorts or patient data.
+- Explicit use of AI/ML as part of the biomarker discovery or
+  prioritization process.
+- Genitourinary neoplasm per the Population definition.
+- Reports at least one candidate biomarker with some performance metric
+  or association with a clinical outcome.
+- Published in English (or another language if full text is evaluable;
+  this will be documented).
+- No lower date limit; the effective window after the search will be
+  documented.
 
-### Exclusión
+### Exclusion
 
-- Revisiones, editoriales, comentarios, protocolos y actas de congreso sin
-  datos primarios (las revisiones se conservan para lectura de contexto y
-  rastreo de referencias, no como estudios incluidos).
-- Modelos de IA que usan biomarcadores ya establecidos únicamente como
-  predictores (sin descubrimiento/priorización de un biomarcador nuevo).
-- Estudios puramente metodológicos sin aplicación a una cohorte GU.
-- Modelos de imagen o patología orientados solo a detección/segmentación o
-  diagnóstico asistido sin derivación de un biomarcador.
-- Tumores no genitourinarios; tumores GU no epiteliales salvo tumores
-  germinales testiculares (sarcomas, linfomas secundarios, metástasis a
-  órgano GU → excluidos).
-- Estudios exclusivamente preclínicos (líneas celulares, modelos animales)
-  sin componente en tejido/datos humanos.
+- Reviews, editorials, commentaries, protocols, and conference abstracts
+  without primary data (reviews are retained for contextual reading and
+  reference tracking, not as included studies).
+- AI models that use already-established biomarkers solely as predictors
+  (without discovery/prioritization of a new biomarker).
+- Purely methodological studies without application to a GU cohort.
+- Imaging or pathology models aimed only at detection/segmentation or
+  assisted diagnosis without derivation of a biomarker.
+- Non-genitourinary tumors; non-epithelial GU tumors except testicular
+  germ cell tumors (sarcomas, secondary lymphomas, metastases to a GU
+  organ → excluded).
+- Exclusively preclinical studies (cell lines, animal models) without a
+  human tissue/data component.
 
-## Ecuaciones de búsqueda
+## Search equations
 
-Estructura de bloques: **(GU neoplasm) AND (AI/ML) AND (biomarker discovery /
-signature)**. Por límite del conector PubMed (máx. 20 operadores booleanos
-por consulta) la búsqueda se ejecutó **por sitio tumoral** y se unió por
+Block structure: **(GU neoplasm) AND (AI/ML) AND (biomarker discovery /
+signature)**. Due to the PubMed connector's limit (max. 20 boolean
+operators per query), the search was run **by tumor site** and merged by
 PMID.
 
-### Canal A — MEDLINE (PubMed), ejecutado 2026-09-09
+### Channel A — MEDLINE (PubMed), run 2026-09-09
 
-**Próstata / Vejiga-urotelio / Riñón** (mismo patrón de 3 bloques):
+**Prostate / Bladder-urothelium / Kidney** (same 3-block pattern):
 
 ```
 (<site>[MeSH] OR <site terms>[tiab])
@@ -125,217 +124,215 @@ AND
  "radiomic signature"[tiab] OR nomogram[tiab] OR "molecular subtype"[tiab])
 ```
 
-- Próstata: `("Prostatic Neoplasms"[MeSH] OR "prostate cancer"[tiab])` → **202**
-- Vejiga: `("Urinary Bladder Neoplasms"[MeSH] OR "bladder cancer"[tiab] OR
+- Prostate: `("Prostatic Neoplasms"[MeSH] OR "prostate cancer"[tiab])` → **202**
+- Bladder: `("Urinary Bladder Neoplasms"[MeSH] OR "bladder cancer"[tiab] OR
   "urothelial carcinoma"[tiab])` → **171**
-- Riñón: `("Carcinoma, Renal Cell"[MeSH] OR "Kidney Neoplasms"[MeSH] OR
+- Kidney: `("Carcinoma, Renal Cell"[MeSH] OR "Kidney Neoplasms"[MeSH] OR
   "renal cell carcinoma"[tiab] OR "kidney cancer"[tiab])` → **199**
 
-**Pene / Testículo** (sin bloque de biomarcador, por baja densidad de
-literatura; el bloque de IA se amplió con `"digital pathology"` y
-`"neural network"`):
+**Penis / Testis** (no biomarker block, due to low literature density; the
+AI block was expanded with `"digital pathology"` and `"neural network"`):
 
-- Pene: `("Penile Neoplasms"[MeSH] OR "penile cancer"[tiab] OR
+- Penis: `("Penile Neoplasms"[MeSH] OR "penile cancer"[tiab] OR
   "penile carcinoma"[tiab] OR "penile squamous cell carcinoma"[tiab]) AND
-  (IA ampliada)` → **14**
-- Testículo: `("Testicular Neoplasms"[MeSH] OR "testicular cancer"[tiab] OR
+  (expanded AI)` → **14**
+- Testis: `("Testicular Neoplasms"[MeSH] OR "testicular cancer"[tiab] OR
   "testicular germ cell tumor"[tiab] OR "testicular germ cell tumour"[tiab])
-  AND (IA ampliada)` → **57**
+  AND (expanded AI)` → **57**
 
-Corpus RIS: `searches/ris/AIBIO_GU_pubmed_2026-09-09.ris` (metadatos vía
-conector PubMed/NCBI; abstract presente en 628/632).
+RIS corpus: `searches/ris/AIBIO_GU_pubmed_2026-09-09.ris` (metadata via
+the PubMed/NCBI connector; abstract present in 628/632).
 
-### Canal B — Europe PMC, ejecutado 2026-09-09
+### Channel B — Europe PMC, run 2026-09-09
 
-Ejecutado contra la **API REST pública de Europe PMC**
-(`https://www.ebi.ac.uk/europepmc/webservices/rest/search`, sin
-autenticación; no se dispone de conector MCP de Europe PMC en la sesión de
-REVISOR — en revisiones previas la búsqueda Europe PMC se corría en el
-proyecto REDACTOR). Sintaxis `TITLE:` / `ABSTRACT:`, misma estructura de
-bloques que el Canal A, restringido a `SRC:MED OR SRC:PMC OR SRC:PPR`
-(incluye preprints y registros solo-PMC no indexados en MEDLINE).
+Run against the **public Europe PMC REST API**
+(`https://www.ebi.ac.uk/europepmc/webservices/rest/search`, no
+authentication; no Europe PMC MCP connector is available in the REVISOR
+session — in previous reviews the Europe PMC search was run in the
+REDACTOR project). `TITLE:` / `ABSTRACT:` syntax, same block structure as
+Channel A, restricted to `SRC:MED OR SRC:PMC OR SRC:PPR` (includes
+preprints and PMC-only records not indexed in MEDLINE).
 
-- Próstata → 189 · Vejiga → 152 · Riñón → 169 (bloque de biomarcador
-  exigido)
-- Pene → 14 · Testículo → 54 (bloque de IA ampliado, sin bloque de
-  biomarcador)
-- **576 únicos** tras dedup interno; 511 ya presentes en el Canal A
-  (solapamiento 89 %); **65 registros nuevos** incorporados (mayoría
-  preprints de Research Square / bioRxiv / medRxiv / Preprints.org / SSRN;
-  ~12 registros MEDLINE que las ecuaciones por sitio del Canal A no
-  capturaron).
+- Prostate → 189 · Bladder → 152 · Kidney → 169 (biomarker block
+  required)
+- Penis → 14 · Testis → 54 (expanded AI block, no biomarker block)
+- **576 unique** after internal dedup; 511 already present in Channel A
+  (89% overlap); **65 new records** incorporated (mostly preprints from
+  Research Square / bioRxiv / medRxiv / Preprints.org / SSRN; ~12 MEDLINE
+  records not captured by Channel A's per-site equations).
 
-Corpus RIS combinado: `searches/ris/AIBIO_GU_pubmed_europepmc_2026-09-09.ris`
-(el RIS solo-PubMed queda en `searches/ris/superseded/`). Campo `N1` de cada
-registro marca `source_channel: A` o `B`.
+Combined RIS corpus: `searches/ris/AIBIO_GU_pubmed_europepmc_2026-09-09.ris`
+(the PubMed-only RIS remains in `searches/ris/superseded/`). The `N1`
+field of each record marks `source_channel: A` or `B`.
 
-**Scite (descartado como canal):** se probó `search_literature` de Scite como
-sustituto de Europe PMC; su búsqueda es sobre texto completo (no
-título/abstract), devuelve miles de hits por sitio con baja precisión
-(mayoría revisiones/panorámicas) y el muestreo no es exhaustivo ni
-reproducible como consulta de base de datos. No se incorpora al corpus; Scite
-queda reservado para rastreo dirigido de vacíos durante la síntesis.
+**Scite (dropped as a channel):** Scite's `search_literature` was tested
+as a substitute for Europe PMC; its search is over full text (not
+title/abstract), returns thousands of hits per site with low precision
+(mostly reviews/overviews), and its sampling is neither exhaustive nor
+reproducible as a database query. It is not incorporated into the corpus;
+Scite is reserved for targeted gap tracking during synthesis.
 
 ### Preprints
 
-Los preprints se retienen para cribado título/abstract. Regla de
-sustitución: si durante el cribado o la extracción se identifica una versión
-publicada del mismo trabajo, se sustituye el preprint por el registro
-publicado y se documenta en `decision-log.md`.
+Preprints are retained for title/abstract screening. Substitution rule:
+if a published version of the same work is identified during screening or
+extraction, the preprint is replaced by the published record and this is
+documented in `decision-log.md`.
 
-### Canal C — "identificados por otros métodos" (rastreo de citas)
+### Channel C — "identified through other methods" (citation tracking)
 
-Decisión 2026-09-09: la estrategia de bases de datos se **cierra en dos
-canales** (PubMed + Europe PMC), a la par del estándar de las revisiones
-previas del repositorio (HPV_PSCC, ctDNA_GU, GLP1). No se ejecutan
-OpenAlex / Semantic Scholar / SciELO / arXiv: rendimiento marginal esperado
-bajo (la elegibilidad exige cohorte humana GU + derivación de biomarcador →
-literatura clínica/traslacional indexada en MEDLINE/PMC) y solapamiento
-Canal A/B del 89 % que sugiere saturación. Limitación documentada.
+Decision 2026-09-09: the database search strategy is **closed at two
+channels** (PubMed + Europe PMC), matching the standard of the
+repository's previous reviews (HPV_PSCC, ctDNA_GU, GLP1). OpenAlex /
+Semantic Scholar / SciELO / arXiv are not run: low marginal yield is
+expected (eligibility requires a human GU cohort + biomarker derivation →
+clinical/translational literature indexed in MEDLINE/PMC) and the 89%
+Channel A/B overlap suggests saturation. Documented limitation.
 
-Canal C = **rastreo de citas** tras el cribado de texto completo:
-referencias hacia atrás de los estudios incluidos y de las revisiones
-sistemáticas/narrativas recuperadas, más citas hacia adelante de los
-incluidos, más literatura que aporte el usuario (RIS/DOI). Los hallazgos se
-declaran aparte en la contabilidad PRISMA como "otros métodos".
+Channel C = **citation tracking** after full-text screening: backward
+references of the included studies and of retrieved systematic/narrative
+reviews, plus forward citations of the includes, plus literature
+contributed by the user (RIS/DOI). Findings are declared separately in
+the PRISMA count as "other methods".
 
-Ejecución 2026-09-23 (Europe PMC): citas hacia atrás de las 20 revisiones
-reservadas en el cribado de título/abstract, y citas hacia adelante de los
-400 incluidos de la búsqueda en bases. No hubo RIS ni DOI aportado por el
-usuario. Las citas hacia atrás de esos 400 estudios primarios quedan fuera
-de esta pasada.
+Run 2026-09-23 (Europe PMC): backward citations of the 20 reviews reserved
+at title/abstract screening, and forward citations of the 400 includes
+from the database search. No RIS or DOI was contributed by the user. The
+backward citations of those 400 primary studies are outside the scope of
+this pass.
 
-### Bases sin conector ni API abierta
+### Databases with no connector or open API
 
-Embase, Web of Science, Scopus, IEEE Xplore, Cochrane CENTRAL: requieren
-acceso institucional del que no se dispone. Su omisión es aceptable para una
-revisión integrativa; se documenta como limitación. Si se obtiene acceso, se
-incorporarán como fuente adicional declarada.
+Embase, Web of Science, Scopus, IEEE Xplore, Cochrane CENTRAL: require
+institutional access that is not available. Their omission is acceptable
+for an integrative review; documented as a limitation. If access is
+obtained, they will be incorporated as an additional declared source.
 
-## Contabilidad PRISMA (n reales — 2026-09-09)
+## PRISMA count (actual n — 2026-09-09)
 
-| Etapa | n |
+| Stage | n |
 |---|---|
-| Canal A PubMed — próstata / vejiga / riñón / pene / testículo | 202 / 171 / 199 / 14 / 57 |
-| Canal A — subtotal bruto | 643 |
-| Canal A — únicos tras dedup por PMID | 632 |
-| Canal B Europe PMC — próstata / vejiga / riñón / pene / testículo | 189 / 152 / 169 / 14 / 54 |
-| Canal B — únicos tras dedup interno | 576 |
-| Canal B — solapan con Canal A (dedup cruzado por PMID/DOI) | 511 |
-| Canal B — nuevos incorporados | 65 |
-| **Corpus combinado ingresado a SQLite (búsqueda en bases cerrada)** | **697** |
+| Channel A PubMed — prostate / bladder / kidney / penis / testis | 202 / 171 / 199 / 14 / 57 |
+| Channel A — gross subtotal | 643 |
+| Channel A — unique after PMID dedup | 632 |
+| Channel B Europe PMC — prostate / bladder / kidney / penis / testis | 189 / 152 / 169 / 14 / 54 |
+| Channel B — unique after internal dedup | 576 |
+| Channel B — overlap with Channel A (cross-dedup by PMID/DOI) | 511 |
+| Channel B — new records incorporated | 65 |
+| **Combined corpus loaded into SQLite (database search closed)** | **697** |
 
-Registros de la búsqueda en bases: 697 (`REC-AIBIOGU-000001`…`000697`; 693 con
-abstract), verificado en intake (ver `logs/workflow-log.md`).
+Database search records: 697 (`REC-AIBIOGU-000001`…`000697`; 693 with
+abstract), verified at intake (see `logs/workflow-log.md`).
 
-### Búsqueda en bases — texto completo (2026-09-21)
+### Database search — full text (2026-09-21)
 
-Los 536 incluidos de título y abstract pasaron a recuperación
-(`pending_retrieval` el 2026-09-13). El 2026-09-21 el estado ya no es
-pendiente.
+The 536 title/abstract includes moved to retrieval
+(`pending_retrieval` on 2026-09-13). On 2026-09-21 the status was no
+longer pending.
 
-| Etapa | n |
+| Stage | n |
 |---|---|
-| Texto buscado | 536 |
-| Texto no recuperado (`retrieval_status = unavailable`; decisión aún Pending, no se evaluaron) | 100 |
-| Texto recuperado y evaluado | 436 |
-| Incluidos | 400 |
-| Excluidos | 36 |
-| — intervención | 19 |
-| — tipo de publicación | 15 |
-| — desenlace | 1 |
-| — población | 1 |
+| Text sought | 536 |
+| Text not retrieved (`retrieval_status = unavailable`; decision still Pending, not evaluated) | 100 |
+| Text retrieved and evaluated | 436 |
+| Included | 400 |
+| Excluded | 36 |
+| — intervention | 19 |
+| — publication type | 15 |
+| — outcome | 1 |
+| — population | 1 |
 
-De los 100 no recuperados: 94 sin suscripción institucional y sin copia en
-acceso abierto; 1 embargo de PMC hasta 2026-12; 1 repositorio solo con
-metadatos; 1 paywall de ScienceDirect; 1 paywall de Wiley; 1 descarga
-bloqueada en preprints.org; 1 handle roto en Helda. El motivo está en
-`full_texts.note` de cada registro.
+Of the 100 not retrieved: 94 with no institutional subscription and no
+open-access copy; 1 PMC embargo until 2026-12; 1 repository with metadata
+only; 1 ScienceDirect paywall; 1 Wiley paywall; 1 blocked download on
+preprints.org; 1 broken handle on Helda. The reason is recorded in
+`full_texts.note` for each record.
 
-### Canal C — otros métodos (2026-09-23)
+### Channel C — other methods (2026-09-23)
 
-Fuente: Europe PMC. Enlaces crudos 4953; registros únicos 4185.
+Source: Europe PMC. Raw links 4953; unique records 4185.
 
-| Etapa | n |
+| Stage | n |
 |---|---|
-| Ya presentes en los 697 | 215 |
-| Sin título | 1 |
-| Registros nuevos | 3969 |
-| Excluidos por filtro de título (sitio GU y método de IA/radiómica/biomarcador) | 3279 |
-| Cribados en título y abstract | 690 |
-| Excluidos en título y abstract | 348 |
-| — tipo de publicación | 199 |
-| — desenlace | 71 |
-| — intervención | 70 |
-| — población | 8 |
-| Texto no recuperado; elegibilidad sin resolver | 5 |
-| Incluidos en título y abstract, texto buscado | 337 |
-| Texto no recuperado entre esos incluidos | 230 |
-| Texto recuperado e incluido como estudio | 107 |
-| **Estudios incluidos por otros métodos** | **107** |
-| Estudios incluidos por búsqueda en bases (FT 2026-09-21) | 400 |
-| **Estudios incluidos en la revisión** | **507** |
+| Already present among the 697 | 215 |
+| No title | 1 |
+| New records | 3969 |
+| Excluded by title filter (GU site and AI/radiomics/biomarker method) | 3279 |
+| Screened at title and abstract | 690 |
+| Excluded at title and abstract | 348 |
+| — publication type | 199 |
+| — outcome | 71 |
+| — intervention | 70 |
+| — population | 8 |
+| Text not retrieved; eligibility unresolved | 5 |
+| Included at title and abstract, text sought | 337 |
+| Text not retrieved among those includes | 230 |
+| Text retrieved and included as a study | 107 |
+| **Studies included via other methods** | **107** |
+| Studies included via database search (FT 2026-09-21) | 400 |
+| **Studies included in the review** | **507** |
 
-Los 5 sin resolver son: *J Urol* 2000 (10.1016/s0022-5347(05)67948-7),
-*IEEE TBME* 2015 (10.1109/tbme.2015.2485779), arquitectura nuclear prostática
-2017 (sin PMID ni DOI), *Radiology: AI* 2025 (10.1148/ryai.230555) y
-*The Prostate* 2026 (10.1002/pros.70088). Los 230 restantes quedan como
-incluidos de título y abstract sin PDF en acceso abierto.
+The 5 unresolved are: *J Urol* 2000 (10.1016/s0022-5347(05)67948-7),
+*IEEE TBME* 2015 (10.1109/tbme.2015.2485779), prostatic nuclear
+architecture 2017 (no PMID or DOI), *Radiology: AI* 2025
+(10.1148/ryai.230555), and *The Prostate* 2026 (10.1002/pros.70088). The
+remaining 230 remain as title/abstract includes with no open-access PDF.
 
-## Deduplicación e intake
+## Deduplication and intake
 
-- Deduplicación cruzada por DOI/PMID antes del conteo final.
-- Intake a SQLite con `python3 scripts/review_intake_ris.py --review
-  reviews/AIBIO_GU` (prefijo `REC-AIBIOGU-000001`…).
-- `import_batch_id` según lo genera el script, sin edición manual.
+- Cross-deduplication by DOI/PMID before the final count.
+- Intake to SQLite with `python3 scripts/review_intake_ris.py --review
+  reviews/AIBIO_GU` (prefix `REC-AIBIOGU-000001`…).
+- `import_batch_id` as generated by the script, with no manual editing.
 
-## Cribado
+## Screening
 
-- Título/abstract doble e independiente: R1 = `REV-ALCIDES`, R2 =
+- Double, independent title/abstract screening: R1 = `REV-ALCIDES`, R2 =
   `REV-PAOLA`.
-- Consenso de conflictos documentado; kappa reportado.
-- Texto completo: doble, con motivos de exclusión controlados
+- Documented conflict consensus; kappa reported.
+- Full text: double, with controlled exclusion reasons
   (`exclusion_reasons`).
-- Catálogo RIS del corpus `Included` para Paperpile al pasar de consenso a
-  recuperación de texto completo (ver `manual/full-text-catalog-ris.md`).
+- RIS catalog of the `Included` corpus for Paperpile when moving from
+  consensus to full-text retrieval (see `manual/full-text-catalog-ris.md`).
 
-## Evaluación crítica (appraisal)
+## Critical appraisal
 
-- **MMAT v.2018** (Mixed Methods Appraisal Tool) como instrumento primario,
-  por la heterogeneidad de diseños esperada (igual que HPV_PSCC).
-- Complemento específico para estudios de modelos predictivos: dominios
-  **PROBAST** / **TRIPOD-AI** como appraisal dirigido de riesgo de sesgo y
-  aplicabilidad de los modelos de IA. Se registrará por estudio.
+- **MMAT v.2018** (Mixed Methods Appraisal Tool) as the primary
+  instrument, given the expected design heterogeneity (as in HPV_PSCC).
+- Specific complement for predictive-model studies: **PROBAST** /
+  **TRIPOD-AI** domains as targeted appraisal of risk of bias and
+  applicability of the AI models. Recorded per study.
 
-## Extracción
+## Extraction
 
-Formulario ancho en `extraction/`. Campos mínimos: sitio tumoral, diseño,
-n, fuente de datos (cohorte propia / TCGA / CPTAC / otra), modalidad de
-dato, tarea de IA, arquitectura/algoritmo, features de entrada, biomarcador
-resultante, propósito clínico, métrica y valor de desempeño, validación
-(interna/externa/utilidad), disponibilidad de código y datos, guía de
-reporte declarada, financiamiento y conflictos.
+Wide form in `extraction/`. Minimum fields: tumor site, design,
+n, data source (own cohort / TCGA / CPTAC / other), data
+modality, AI task, architecture/algorithm, input features, resulting
+biomarker, clinical purpose, performance metric and value, validation
+(internal/external/utility), code and data availability, declared
+reporting guideline, funding, and conflicts of interest.
 
-## Síntesis
+## Synthesis
 
-Síntesis integrativa narrativa (Whittemore & Knafl): reducción, despliegue,
-comparación y conclusiones, estratificada por **sitio tumoral** y por
-**modalidad de dato**. Sin metaanálisis previsto (heterogeneidad de
-desenlaces y métricas). Tablas de mapeo modalidad × propósito × sitio.
+Narrative integrative synthesis (Whittemore & Knafl): reduction, display,
+comparison, and conclusions, stratified by **tumor site** and by **data
+modality**. No meta-analysis planned (outcome and metric heterogeneity).
+Modality × purpose × site mapping tables.
 
 ## Handoff
 
-Al cerrar corpus FT + appraisal + extracción, exportar paquete con
-`python3 scripts/export_handoff_sesion2.py --review reviews/AIBIO_GU`
-(ver `manual/handoff-sesion2.md`). REDACTOR Sesión 2 redacta el manuscrito
-en inglés.
+Upon closing the FT + appraisal + extraction corpus, export the package
+with `python3 scripts/export_handoff_sesion2.py --review reviews/AIBIO_GU`
+(see `manual/handoff-sesion2.md`). REDACTOR Session 2 drafts the
+manuscript in English.
 
-## Estado
+## Status
 
-Protocolo aprobado (2026-09-09). Búsqueda en bases cerrada (697). Cribado
-T/A cerrado (536 Included). FT de esa cohorte cerrado 2026-09-21
-(**100 no recuperados / 400 Included / 36 Excluded**). Appraisal y
-extracción de esos 400 cerrados. Canal C cerrado 2026-09-23: **107** estudios añadidos con texto,
-**230** incluidos de título y abstract sin PDF, **5** elegibilidades sin
-texto. Corpus para síntesis: **507** estudios. Síntesis de mapeo en
+Protocol approved (2026-09-09). Database search closed (697). T/A
+screening closed (536 Included). FT of that cohort closed 2026-09-21
+(**100 not retrieved / 400 Included / 36 Excluded**). Appraisal and
+extraction of those 400 closed. Channel C closed 2026-09-23: **107**
+studies added with text, **230** included at title and abstract without
+a PDF, **5** eligibilities without text. Corpus for synthesis: **507**
+studies. Mapping synthesis in
 `analysis/AIBIO_GU_synthesis_summary_2026-09-23.md`.
