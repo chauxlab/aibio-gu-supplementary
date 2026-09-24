@@ -1,0 +1,26 @@
+arm,stage,n,note
+database,canal_a_raw,643,PubMed prostate/bladder/kidney/penile/testis 202/171/199/14/57
+database,canal_a_unique_pmid,632,
+database,canal_b_unique,576,Europe PMC internal dedup
+database,canal_b_overlap_canal_a,511,
+database,canal_b_new,65,
+database,corpus_sqlite,697,REC-AIBIOGU-000001 to 000697
+database,title_abstract_included,536,
+database,reports_sought,536,Same 536; retrieval started as pending_retrieval on 2026-09-13
+database,full_text_not_retrieved,100,retrieval_status=unavailable and decision=Pending (sought, not assessed). 94 no subscription and no OA copy; 1 PMC embargo until 2026-12; 1 metadata-only repository; 1 ScienceDirect paywall; 1 Wiley paywall; 1 preprints.org download blocked; 1 broken Helda handle
+database,full_text_assessed,436,Retrieved PDFs only
+database,full_text_included,400,Closed 2026-09-21
+database,full_text_excluded,36,wrong intervention 19; wrong publication type 15; wrong outcome 1; wrong population 1
+other_methods,raw_citation_links,4953,Europe PMC 2026-09-23; backward of 20 reviews plus forward of 400 includes
+other_methods,unique_hits,4185,
+other_methods,already_in_corpus,215,
+other_methods,no_title,1,
+other_methods,new_records,3969,
+other_methods,title_filter_excluded,3279,Title must name a GU site and an AI/radiomics/biomarker method
+other_methods,title_abstract_screened,690,
+other_methods,title_abstract_excluded,348,wrong publication type 199; wrong outcome 71; wrong intervention 70; wrong population 8
+other_methods,full_text_not_recovered_unresolved,5,Eligibility not settled
+other_methods,reports_sought,337,
+other_methods,reports_not_retrieved,230,
+other_methods,studies_included,107,
+review,studies_included_total,507,400 database full-text includes plus 107 other-methods includes

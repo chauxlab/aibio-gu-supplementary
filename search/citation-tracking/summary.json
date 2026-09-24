@@ -1,0 +1,13 @@
+{
+  "corpus_records": 697,
+  "jobs": 420,
+  "unresolved_seeds": [],
+  "errors": [],
+  "raw_links": 4953,
+  "unique_hits": 4185,
+  "in_corpus": 215,
+  "no_title": 1,
+  "new": 3969,
+  "pcc_pass": 690,
+  "pcc_fail_among_new": 3279
+}

@@ -1,0 +1,889 @@
+TY  - JOUR
+AU  - Bray, F
+AU  - Laversanne, M
+AU  - Sung, H
+AU  - Ferlay, J
+AU  - Siegel, RL
+AU  - Soerjomataram, I
+TI  - Global cancer statistics 2022: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries.
+T2  - CA Cancer J Clin
+PY  - 2024
+VL  - 74
+IS  - 3
+SP  - 229-263
+DO  - 10.3322/caac.21834
+UR  - https://doi.org/10.3322/caac.21834
+ER  - 
+
+TY  - JOUR
+AU  - Goda, RY
+AU  - Abdel-Aziz, AK
+TI  - Exploiting artificial intelligence in precision oncology: an updated comprehensive review.
+T2  - J Transl Med
+PY  - 2025
+DO  - 10.1186/s12967-025-07308-2
+UR  - https://doi.org/10.1186/s12967-025-07308-2
+ER  - 
+
+TY  - JOUR
+AU  - Feretzakis, G
+AU  - Juliebø-Jones, P
+AU  - Tsaturyan, A
+AU  - Sarafidis, M
+AU  - Verykios, VS
+AU  - Somani, BK
+TI  - Emerging Trends in AI and Radiomics for Bladder, Kidney, and Prostate Cancer: A Critical Review.
+T2  - Cancers (Basel)
+PY  - 2024
+VL  - 16
+IS  - 4
+SP  - 810
+DO  - 10.3390/cancers16040810
+UR  - https://doi.org/10.3390/cancers16040810
+ER  - 
+
+TY  - JOUR
+AU  - Gelikman, DG
+AU  - Rais-Bahrami, S
+AU  - Pinto, PA
+AU  - Turkbey, B
+TI  - AI-powered radiomics: revolutionizing detection of urologic malignancies.
+T2  - Curr Opin Urol
+PY  - 2023
+VL  - 34
+IS  - 1
+SP  - 1-7
+DO  - 10.1097/mou.0000000000001144
+UR  - https://doi.org/10.1097/mou.0000000000001144
+ER  - 
+
+TY  - JOUR
+AU  - Whittemore, R
+AU  - Knafl, K
+TI  - The integrative review: updated methodology.
+T2  - J Adv Nurs
+PY  - 2005
+VL  - 52
+IS  - 5
+SP  - 546-553
+DO  - 10.1111/j.1365-2648.2005.03621.x
+UR  - https://doi.org/10.1111/j.1365-2648.2005.03621.x
+ER  - 
+
+TY  - JOUR
+AU  - Page, MJ
+AU  - McKenzie, JE
+AU  - Bossuyt, PM
+AU  - Boutron, I
+AU  - Hoffmann, TC
+AU  - Mulrow, CD
+TI  - The PRISMA 2020 statement: an updated guideline for reporting systematic reviews.
+T2  - BMJ
+PY  - 2021
+VL  - 372
+SP  - n71
+DO  - 10.1136/bmj.n71
+UR  - https://doi.org/10.1136/bmj.n71
+ER  - 
+
+TY  - JOUR
+AU  - Hong, QN
+AU  - Fàbregues, S
+AU  - Bartlett, G
+AU  - Boardman, F
+AU  - Cargo, M
+AU  - Dagenais, P
+TI  - The Mixed Methods Appraisal Tool (MMAT) version 2018 for information professionals and researchers.
+T2  - Educ Inf
+PY  - 2018
+VL  - 34
+IS  - 4
+SP  - 285-291
+DO  - 10.3233/efi-180221
+UR  - https://doi.org/10.3233/efi-180221
+ER  - 
+
+TY  - JOUR
+AU  - Wolff, RF
+AU  - Moons, KGM
+AU  - Riley, RD
+AU  - Whiting, PF
+AU  - Westwood, M
+AU  - Collins, GS
+TI  - PROBAST: A Tool to Assess the Risk of Bias and Applicability of Prediction Model Studies.
+T2  - Ann Intern Med
+PY  - 2019
+VL  - 170
+IS  - 1
+SP  - 51-58
+DO  - 10.7326/M18-1376
+UR  - https://doi.org/10.7326/M18-1376
+ER  - 
+
+TY  - JOUR
+AU  - Collins, GS
+AU  - Moons, KGM
+AU  - Dhiman, P
+AU  - Riley, RD
+AU  - Beam, AL
+AU  - Van Calster, B
+TI  - TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods.
+T2  - BMJ
+PY  - 2024
+VL  - 385
+SP  - e078378
+DO  - 10.1136/bmj-2023-078378
+UR  - https://doi.org/10.1136/bmj-2023-078378
+ER  - 
+
+TY  - JOUR
+AU  - Lin, SW
+AU  - Wu, XH
+AU  - Liu, WQ
+AU  - Chen, DN
+AU  - Lin, Y
+AU  - Liu, ZS
+TI  - Radiomics analysis of CT imaging for predicting MIT family translocation renal cell carcinoma: a multicenter retrospective clinical study.
+T2  - BMC Cancer
+PY  - 2026
+DO  - 10.1186/s12885-026-16334-2
+UR  - https://doi.org/10.1186/s12885-026-16334-2
+ER  - 
+
+TY  - JOUR
+AU  - Yang, C
+AU  - Zhang, Z
+AU  - Wu, B
+AU  - Zhao, H
+AU  - Ma, T
+AU  - Luo, Y
+TI  - Multiphase CT-based deep learning radiomics nomogram models for preoperative WHO/ISUP grading of clear cell renal cell carcinoma: a two-center validation study.
+T2  - BMC Med Imaging
+PY  - 2026
+DO  - 10.1186/s12880-026-02268-5
+UR  - https://doi.org/10.1186/s12880-026-02268-5
+ER  - 
+
+TY  - JOUR
+AU  - He, G
+AU  - Lai, L
+AU  - Yu, G
+AU  - Pang, H
+AU  - Yu, X
+AU  - Zhang, H
+TI  - Survival Prediction for Postoperative Patients With Kidney Cancer Based on Computed Tomography Radiomics: Retrospective Cohort Study.
+T2  - JMIR Med Inform
+PY  - 2025
+DO  - 10.2196/73162
+UR  - https://doi.org/10.2196/73162
+ER  - 
+
+TY  - JOUR
+AU  - Xiong, Y
+AU  - Yao, L
+AU  - Lin, J
+AU  - Yao, J
+AU  - Bai, Q
+AU  - Huang, Y
+TI  - Artificial intelligence links CT images to pathologic features and survival outcomes of renal masses.
+T2  - Nat Commun
+PY  - 2025
+DO  - 10.1038/s41467-025-56784-z
+UR  - https://doi.org/10.1038/s41467-025-56784-z
+ER  - 
+
+TY  - JOUR
+AU  - Terrematte, P
+AU  - Andrade, DS
+AU  - Justino, J
+AU  - Stransky, B
+AU  - de Araújo, DSA
+AU  - Dória Neto, AD
+TI  - A Novel Machine Learning 13-Gene Signature: Improving Risk Analysis and Survival Prediction for Clear Cell Renal Cell Carcinoma Patients.
+T2  - Cancers (Basel)
+PY  - 2022
+DO  - 10.3390/cancers14092111
+UR  - https://doi.org/10.3390/cancers14092111
+ER  - 
+
+TY  - JOUR
+AU  - Chen, X
+AU  - Zhang, D
+AU  - Ji, Z
+AU  - Sun, S
+AU  - Wang, J
+AU  - Shen, S
+TI  - Dietary Polyphenol Acteoside-Related Molecular Signatures in Clear Cell Renal Cell Carcinoma: Multi-Omics Profiling and Functional Validation of IMPDH1.
+T2  - Food Sci Nutr
+PY  - 2026
+DO  - 10.1002/fsn3.72340
+UR  - https://doi.org/10.1002/fsn3.72340
+ER  - 
+
+TY  - JOUR
+AU  - Pan, Y
+AU  - Wu, R
+AU  - Zhu, X
+AU  - Hu, X
+AU  - Cheng, J
+AU  - Kong, L
+TI  - NECSO-based classification predicts immunotherapy efficacy and identifies FLAD1 as therapeutic target in kidney renal clear cell carcinoma.
+T2  - Front Immunol
+PY  - 2026
+DO  - 10.3389/fimmu.2026.1914332
+UR  - https://doi.org/10.3389/fimmu.2026.1914332
+ER  - 
+
+TY  - JOUR
+AU  - Wang, YL
+AU  - Liu, F
+AU  - Gu, QB
+AU  - Liu, Q
+AU  - Yang, Y
+AU  - Cheng, F
+TI  - Development and validation of an integrated machine learning model for recurrence-free survival prediction in clear cell renal cell carcinoma.
+T2  - Transl Oncol
+PY  - 2026
+DO  - 10.1016/j.tranon.2026.102937
+UR  - https://doi.org/10.1016/j.tranon.2026.102937
+ER  - 
+
+TY  - JOUR
+AU  - Tao, X
+AU  - Shan, S
+AU  - Chen, X
+AU  - Yu, Z
+AU  - Qi, H
+TI  - An interpretable machine learning model based on habitat radiomics combined with deep learning for predicting the WHO/ISUP grade of patients with clear cell renal cell carcinoma.
+T2  - BMC Med Imaging
+PY  - 2026
+DO  - 10.1186/s12880-026-02285-4
+UR  - https://doi.org/10.1186/s12880-026-02285-4
+ER  - 
+
+TY  - JOUR
+AU  - Ohe, C
+AU  - Yoshida, T
+AU  - Amin, MB
+AU  - Uno, R
+AU  - Atsumi, N
+AU  - Yasukochi, Y
+TI  - Deep learning-based predictions of clear and eosinophilic phenotypes in clear cell renal cell carcinoma.
+T2  - Hum Pathol
+PY  - 2022
+DO  - 10.1016/j.humpath.2022.11.004
+UR  - https://doi.org/10.1016/j.humpath.2022.11.004
+ER  - 
+
+TY  - JOUR
+AU  - Cattelani, L
+AU  - Fortino, V
+TI  - Triple and quadruple optimization for feature selection in cancer biomarker discovery.
+T2  - J Biomed Inform
+PY  - 2024
+DO  - 10.1016/j.jbi.2024.104736
+UR  - https://doi.org/10.1016/j.jbi.2024.104736
+ER  - 
+
+TY  - JOUR
+AU  - Azuaje, F
+AU  - Kim, SY
+AU  - Perez Hernandez, D
+AU  - Dittmar, G
+TI  - Connecting Histopathology Imaging and Proteomics in Kidney Cancer through Machine Learning.
+T2  - J Clin Med
+PY  - 2019
+DO  - 10.3390/jcm8101535
+UR  - https://doi.org/10.3390/jcm8101535
+ER  - 
+
+TY  - JOUR
+AU  - Tang, W
+AU  - Cao, Y
+AU  - Ma, X
+TI  - Novel prognostic prediction model constructed through machine learning on the basis of methylation-driven genes in kidney renal clear cell carcinoma.
+T2  - Biosci Rep
+PY  - 2020
+DO  - 10.1042/bsr20201604
+UR  - https://doi.org/10.1042/bsr20201604
+ER  - 
+
+TY  - JOUR
+AU  - Ma, C
+AU  - Feng, B
+AU  - Lei, Y
+AU  - Yu, Z
+AU  - Liu, Y
+AU  - Cui, J
+TI  - Multimodal deep learning framework integrating multiphase CT and histopathological whole slide imaging for predicting recurrence in ccRCC.
+T2  - Sci Rep
+PY  - 2025
+DO  - 10.1038/s41598-025-25109-x
+UR  - https://doi.org/10.1038/s41598-025-25109-x
+ER  - 
+
+TY  - JOUR
+AU  - Ager, CR
+AU  - Zhang, M
+AU  - Chaimowitz, M
+AU  - Bansal, S
+AU  - Tagore, S
+AU  - Obradovic, A
+TI  - KLRG1 marks tumor-infiltrating CD4 T cell subsets associated with tumor progression and immunotherapy response.
+T2  - J Immunother Cancer
+PY  - 2023
+DO  - 10.1136/jitc-2023-006782
+UR  - https://doi.org/10.1136/jitc-2023-006782
+ER  - 
+
+TY  - JOUR
+AU  - Marquardt, A
+AU  - Solimando, AG
+AU  - Kerscher, A
+AU  - Bittrich, M
+AU  - Kalogirou, C
+AU  - Kübler, H
+TI  - Subgroup-Independent Mapping of Renal Cell Carcinoma-Machine Learning Reveals Prognostic Mitochondrial Gene Signature Beyond Histopathologic Boundaries.
+T2  - Front Oncol
+PY  - 2021
+DO  - 10.3389/fonc.2021.621278
+UR  - https://doi.org/10.3389/fonc.2021.621278
+ER  - 
+
+TY  - JOUR
+AU  - Zhang, H
+AU  - Zheng, Y
+AU  - Ao, W
+AU  - Ding, J
+AU  - Liu, B
+AU  - Huang, H
+TI  - Deep learning based on multiparametric MRI for differentiating benign from malignant PI-RADS 3 prostate lesions: a dual-center study.
+T2  - Sci Rep
+PY  - 2026
+DO  - 10.1038/s41598-026-56643-x
+UR  - https://doi.org/10.1038/s41598-026-56643-x
+ER  - 
+
+TY  - JOUR
+AU  - Ding, K
+AU  - Chen, Q
+AU  - Huang, L
+AU  - Huang, R
+AU  - Liu, M
+AU  - Gong, M
+TI  - Development and validation of an MRI radiomics-based model for predicting progression risk in prostate cancer after endocrine therapy.
+T2  - Transl Androl Urol
+PY  - 2026
+DO  - 10.21037/tau-2025-1-912
+UR  - https://doi.org/10.21037/tau-2025-1-912
+ER  - 
+
+TY  - JOUR
+AU  - Gong, Z
+AU  - Liu, Z
+AU  - Huang, K
+AU  - Zou, J
+AU  - Wu, Z
+AU  - Peng, Y
+TI  - Habitat analysis based on magnetic resonance imaging for the prediction of prostate cancer: a dual-center study.
+T2  - Quant Imaging Med Surg
+PY  - 2025
+DO  - 10.21037/qims-2025-223
+UR  - https://doi.org/10.21037/qims-2025-223
+ER  - 
+
+TY  - JOUR
+AU  - Kurt, HA
+AU  - Kılıçarslan, S
+AU  - Çiçekliyurt, MM
+AU  - Kılıçarslan, S
+TI  - Integrative Bioinformatics and Machine Learning Analysis Identifies Novel Molecular Biomarkers in Prostate Adenocarcinoma.
+T2  - Int J Mol Sci
+PY  - 2026
+DO  - 10.3390/ijms27156635
+UR  - https://doi.org/10.3390/ijms27156635
+ER  - 
+
+TY  - JOUR
+AU  - Kilicarslan, S
+AU  - Cicekliyurt, MM
+AU  - Kiliçarslan, S
+AU  - Hassan, DSM
+AU  - Samee, NA
+TI  - Bioinformatics and machine learning integration reveals a novel 4-gene (GFUS, ARHGAP8, NBL1, and ACTB) biomarker model for prostate cancer.
+T2  - Discov Oncol
+PY  - 2026
+DO  - 10.1007/s12672-025-04369-z
+UR  - https://doi.org/10.1007/s12672-025-04369-z
+ER  - 
+
+TY  - JOUR
+AU  - Wang, H
+AU  - Li, W
+AU  - Deng, W
+AU  - Wu, J
+AU  - Li, K
+AU  - Huang, X
+TI  - Integrated Analysis of Single-Cell RNA Sequencing and Machine Learning Reveals a T Cell-Specific PANoptosis Signature Predicting Prognosis and Immunotherapy in Prostate Cancer.
+T2  - Hum Mutat
+PY  - 2025
+DO  - 10.1155/humu/8889021
+UR  - https://doi.org/10.1155/humu/8889021
+ER  - 
+
+TY  - JOUR
+AU  - He, Y
+AU  - Li, B
+AU  - Tan, Z
+AU  - Jiang, K
+AU  - Ju, W
+AU  - Yu, W
+TI  - A Platform-Independent Binary Gene-Pair Signature Derived from CRPC-Enriched Single-Cell Transcriptomics for Predicting Recurrence-Free Survival in Prostate Cancer.
+T2  - Cancer Manag Res
+PY  - 2026
+DO  - 10.2147/cmar.s623563
+UR  - https://doi.org/10.2147/cmar.s623563
+ER  - 
+
+TY  - JOUR
+AU  - Xue, Y
+AU  - Huang, E
+AU  - Luo, C
+AU  - Qian, Y
+AU  - Wu, T
+AU  - Chu, C
+TI  - Multi-omics analyses related to unfolded protein response in prostate cancer implicate pro-tumor role of IFRD1.
+T2  - Front Immunol
+PY  - 2026
+DO  - 10.3389/fimmu.2026.1744197
+UR  - https://doi.org/10.3389/fimmu.2026.1744197
+ER  - 
+
+TY  - JOUR
+AU  - Morgan, TM
+AU  - Ren, Y
+AU  - Tang, S
+AU  - Zwerink, W
+AU  - Chen, E
+AU  - Mitani, A
+TI  - Development and Validation of a Multimodal Artificial Intelligence-derived Digital Pathology-based Biomarker Predicting Metastasis Among Patients with Biochemical Recurrence After Radical Prostatectomy in NRG/RTOG Trials.
+T2  - Eur Urol
+PY  - 2025
+DO  - 10.1016/j.eururo.2025.12.007
+UR  - https://doi.org/10.1016/j.eururo.2025.12.007
+ER  - 
+
+TY  - JOUR
+AU  - Zhang, YF
+AU  - Zhou, C
+AU  - Guo, S
+AU  - Wang, C
+AU  - Yang, J
+AU  - Yang, ZJ
+TI  - Deep learning algorithm-based multimodal MRI radiomics and pathomics data improve prediction of bone metastases in primary prostate cancer.
+T2  - J Cancer Res Clin Oncol
+PY  - 2024
+DO  - 10.1007/s00432-023-05574-5
+UR  - https://doi.org/10.1007/s00432-023-05574-5
+ER  - 
+
+TY  - JOUR
+AU  - Pan, C
+AU  - He, Y
+AU  - Wang, H
+AU  - Yu, Y
+AU  - Li, L
+AU  - Huang, L
+TI  - Identifying Patients With Rapid Progression From Hormone-Sensitive to Castration-Resistant Prostate Cancer: A Retrospective Study.
+T2  - Mol Cell Proteomics
+PY  - 2023
+DO  - 10.1016/j.mcpro.2023.100613
+UR  - https://doi.org/10.1016/j.mcpro.2023.100613
+ER  - 
+
+TY  - JOUR
+AU  - Guha, A
+AU  - Sadeghi, SA
+AU  - Kunhiraman, HH
+AU  - Fang, F
+AU  - Wang, Q
+AU  - Rafieioskouei, A
+TI  - AI-Driven Prediction of Cardio-Oncology Biomarkers Through Protein Corona Analysis.
+T2  - Chem Eng J
+PY  - 2025
+DO  - 10.1016/j.cej.2025.161134
+UR  - https://doi.org/10.1016/j.cej.2025.161134
+ER  - 
+
+TY  - JOUR
+AU  - Toth, R
+AU  - Schiffmann, H
+AU  - Hube-Magg, C
+AU  - Buscheck, F
+AU  - Hoflmayer, D
+AU  - Weidemann, S
+TI  - Random forest-based modelling to detect biomarkers for prostate cancer progression.
+T2  - Clin Epigenetics
+PY  - 2019
+DO  - 10.1186/s13148-019-0736-8
+UR  - https://doi.org/10.1186/s13148-019-0736-8
+ER  - 
+
+TY  - JOUR
+AU  - Li, W
+AU  - Li, C
+AU  - Li, X
+AU  - Gao, Z
+TI  - Genetic relationships between the gut microbiota and prostate cancer: Mendelian randomization combined with bioinformatics analysis.
+T2  - Aging Male
+PY  - 2026
+DO  - 10.1080/13685538.2026.2615561
+UR  - https://doi.org/10.1080/13685538.2026.2615561
+ER  - 
+
+TY  - JOUR
+AU  - Wang, C
+AU  - Wei, XP
+AU  - Zhou, C
+AU  - Wang, J
+AU  - Zhang, YF
+AU  - He, H
+TI  - Precise prediction of bone metastases and metastatic burden using exosomal mirnas and radiomics: a multi-center study.
+T2  - J Transl Med
+PY  - 2025
+DO  - 10.1186/s12967-025-06691-0
+UR  - https://doi.org/10.1186/s12967-025-06691-0
+ER  - 
+
+TY  - JOUR
+AU  - Wang, YD
+AU  - Lai, YL
+AU  - Liu, CH
+AU  - Su, YT
+AU  - Shen, PC
+AU  - Chen, FH
+TI  - Epigenomics-Guided Multi-Omics Integration Uncovers a Lipid-Metabolic Signature with Translational Utility in Bladder Cancer.
+T2  - Comput Struct Biotechnol J
+PY  - 2026
+DO  - 10.34133/csbj.0139
+UR  - https://doi.org/10.34133/csbj.0139
+ER  - 
+
+TY  - JOUR
+AU  - Yu, D
+AU  - Zhang, Y
+AU  - Tang, J
+AU  - Qing, J
+AU  - Hu, K
+AU  - Zhang, J
+TI  - A machine learning-guided epithelial plasticity score refines prognostication and immune-context stratification in muscle-invasive bladder cancer.
+T2  - Discov Oncol
+PY  - 2026
+DO  - 10.1007/s12672-026-05555-3
+UR  - https://doi.org/10.1007/s12672-026-05555-3
+ER  - 
+
+TY  - JOUR
+AU  - Liu, J
+AU  - Tang, X
+AU  - Cui, Y
+AU  - Yang, X
+AU  - Yang, Y
+AU  - Du, P
+TI  - Development and validation of a gemcitabine sensitivity-related long noncoding RNA signature for predicting the prognosis and subtypes of bladder cancer.
+T2  - Transl Androl Urol
+PY  - 2026
+DO  - 10.21037/tau-2025-1-970
+UR  - https://doi.org/10.21037/tau-2025-1-970
+ER  - 
+
+TY  - JOUR
+AU  - Zhou, Q
+AU  - Ma, L
+AU  - Yu, Y
+AU  - Zhang, C
+AU  - Ouyang, J
+AU  - Mao, C
+TI  - Development of a radiomics and clinical feature-based nomogram for preoperative prediction of pathological grade in bladder cancer.
+T2  - Front Oncol
+PY  - 2025
+DO  - 10.3389/fonc.2025.1661979
+UR  - https://doi.org/10.3389/fonc.2025.1661979
+ER  - 
+
+TY  - JOUR
+AU  - Han, X
+AU  - Guan, J
+AU  - Guo, L
+AU  - Jiao, Q
+AU  - Wang, K
+AU  - Hou, F
+TI  - A CT-based interpretable deep learning signature for predicting PD-L1 expression in bladder cancer: a two-center study.
+T2  - Cancer Imaging
+PY  - 2025
+DO  - 10.1186/s40644-025-00849-1
+UR  - https://doi.org/10.1186/s40644-025-00849-1
+ER  - 
+
+TY  - JOUR
+AU  - Zheng, Y
+AU  - Shi, H
+AU  - Fu, S
+AU  - Wang, H
+AU  - Li, X
+AU  - Li, Z
+TI  - Development and validation of a radiomics-based nomogram for predicting pathological grade of upper urinary tract urothelial carcinoma.
+T2  - BMC Cancer
+PY  - 2024
+DO  - 10.1186/s12885-024-13325-z
+UR  - https://doi.org/10.1186/s12885-024-13325-z
+ER  - 
+
+TY  - JOUR
+AU  - Peng, L
+AU  - Cai, T
+AU  - Xu, P
+AU  - Chen, C
+AU  - Xiang, Q
+AU  - Zhu, Y
+TI  - Integrating Spatial Multi-Omics and Machine Learning to Unravel the Role of PANoptosis in Bladder Cancer Prognosis and Immunotherapy Response.
+T2  - Oncol Res
+PY  - 2025
+DO  - 10.32604/or.2025.064331
+UR  - https://doi.org/10.32604/or.2025.064331
+ER  - 
+
+TY  - JOUR
+AU  - Tan, Z
+AU  - Chen, X
+AU  - Huang, Y
+AU  - Fu, S
+AU  - Li, H
+AU  - Gong, C
+TI  - Integrative multi-omics and machine learning identify a robust signature for discriminating prognosis and therapeutic targets in bladder cancer.
+T2  - J Cancer
+PY  - 2025
+DO  - 10.7150/jca.105066
+UR  - https://doi.org/10.7150/jca.105066
+ER  - 
+
+TY  - JOUR
+AU  - He, Y
+AU  - Xie, J
+AU  - Zhong, S
+AU  - Zhan, C
+AU  - Dai, F
+AU  - Lai, H
+TI  - A Deep Learning-Generated Mixed Tumor-Stroma Ratio for Prognostic Stratification and Multi-omics Profiling in Bladder Cancer.
+T2  - Research (Wash D C)
+PY  - 2026
+DO  - 10.34133/research.1053
+UR  - https://doi.org/10.34133/research.1053
+ER  - 
+
+TY  - JOUR
+AU  - Peng, X
+AU  - Tan, H
+AU  - Xiao, B
+AU  - Tan, Y
+AU  - Yue, X
+AU  - Cao, Y
+TI  - Deep learning for prognostic stratification and biomarker exploration in upper tract urothelial carcinoma: a multicenter retrospective cohort study.
+T2  - Int J Surg
+PY  - 2025
+DO  - 10.1097/js9.0000000000003581
+UR  - https://doi.org/10.1097/js9.0000000000003581
+ER  - 
+
+TY  - JOUR
+AU  - Jung, M
+AU  - Lee, C
+AU  - Han, D
+AU  - Kim, K
+AU  - Yang, S
+AU  - Nikas, IP
+TI  - Proteomic-Based Machine Learning Analysis Reveals PYGB as a Novel Immunohistochemical Biomarker to Distinguish Inverted Urothelial Papilloma From Low-Grade Papillary Urothelial Carcinoma With Inverted Growth.
+T2  - Front Oncol
+PY  - 2022
+DO  - 10.3389/fonc.2022.841398
+UR  - https://doi.org/10.3389/fonc.2022.841398
+ER  - 
+
+TY  - JOUR
+AU  - Zhang, J
+AU  - Chen, J
+AU  - Xu, M
+AU  - Zhu, T
+TI  - Exploring prognostic DNA methylation genes in bladder cancer: a comprehensive analysis.
+T2  - Discov Oncol
+PY  - 2024
+DO  - 10.1007/s12672-024-01206-7
+UR  - https://doi.org/10.1007/s12672-024-01206-7
+ER  - 
+
+TY  - JOUR
+AU  - Peng, X
+AU  - Xiao, B
+AU  - Yuan, Z
+AU  - Xv, Y
+AU  - Xiao, M
+AU  - Shi, W
+TI  - Machine learning-based integration of systemic immune-inflammation and nutritional signatures for predicting disease-free survival in upper tract urothelial carcinoma: a multicenter study.
+T2  - Front Immunol
+PY  - 2026
+DO  - 10.3389/fimmu.2026.1759547
+UR  - https://doi.org/10.3389/fimmu.2026.1759547
+ER  - 
+
+TY  - JOUR
+AU  - Lisson, CS
+AU  - Manoj, S
+AU  - Wolf, D
+AU  - Lisson, CG
+AU  - Schmidt, SA
+AU  - Beer, M
+TI  - Machine Learning Classifiers for Predictive Biomarkers Combining Clinical and Radiomic Data in Testicular Cancer
+T2  - 
+PY  - 2023
+DO  - 10.20944/preprints202310.1175.v1
+UR  - https://doi.org/10.20944/preprints202310.1175.v1
+ER  - 
+
+TY  - JOUR
+AU  - Scavuzzo, A
+AU  - Pasini, G
+AU  - Crescio, E
+AU  - Jimenez-Rios, MA
+AU  - Figueroa-Rodriguez, P
+AU  - Comelli, A
+TI  - Radiomics Analyses to Predict Histopathology in Patients with Metastatic Testicular Germ Cell Tumors before Post-Chemotherapy Retroperitoneal Lymph Node Dissection.
+T2  - J Imaging
+PY  - 2023
+DO  - 10.3390/jimaging9100213
+UR  - https://doi.org/10.3390/jimaging9100213
+ER  - 
+
+TY  - JOUR
+AU  - Ozgun, G
+AU  - Abdalvand, N
+AU  - Ozcan, G
+AU  - Nip, KM
+AU  - Khazamipour, N
+AU  - Rahmim, A
+TI  - Machine Learning Model Integrating Computed Tomography Image-Derived Radiomics and Circulating miRNAs to Predict Residual Teratoma in Metastatic Nonseminoma Testicular Cancer.
+T2  - JCO Clin Cancer Inform
+PY  - 2025
+DO  - 10.1200/cci-25-00105
+UR  - https://doi.org/10.1200/cci-25-00105
+ER  - 
+
+TY  - JOUR
+AU  - Medvedev, KE
+AU  - Acosta, PH
+AU  - Jia, L
+AU  - Grishin, NV
+TI  - Deep Learning for Subtypes Identification of Pure Seminoma of the Testis.
+T2  - Clin Pathol
+PY  - 2024
+DO  - 10.1177/2632010x241232302
+UR  - https://doi.org/10.1177/2632010x241232302
+ER  - 
+
+TY  - JOUR
+AU  - Li, X
+AU  - Ding, R
+AU  - Liu, Z
+AU  - Teixeira, WMS
+AU  - Ye, J
+AU  - Tian, L
+TI  - A predictive system comprising serum microRNAs and radiomics for residual retroperitoneal masses in metastatic nonseminomatous germ cell tumors.
+T2  - Cell Rep Med
+PY  - 2024
+DO  - 10.1016/j.xcrm.2024.101843
+UR  - https://doi.org/10.1016/j.xcrm.2024.101843
+ER  - 
+
+TY  - UNPB
+AU  - Chen, H
+AU  - Weijia, C
+AU  - Fan, L
+AU  - Minghong, F
+AU  - Jianglai, W
+AU  - Zijian, T
+TI  - PLA2G2A⁺ CAFs as a Key Driver of Lymph Node Metastasis in Penile Cancer and Its Underlying Mechanisms
+T2  - 
+PY  - 2026
+DO  - 10.21203/rs.3.rs-8936508/v1
+UR  - https://doi.org/10.21203/rs.3.rs-8936508/v1
+ER  - 
+
+TY  - JOUR
+AU  - Ye, C
+AU  - Chen, X
+AU  - Chen, Z
+AU  - Liu, S
+AU  - Kong, R
+AU  - Lin, W
+TI  - Comprehensive analysis of single-cell and bulk RNA sequencing data reveals an EGFR signature for predicting immunotherapy response and prognosis in pan-cancer.
+T2  - Front Immunol
+PY  - 2025
+DO  - 10.3389/fimmu.2025.1604394
+UR  - https://doi.org/10.3389/fimmu.2025.1604394
+ER  - 
+
+TY  - JOUR
+AU  - Chiang, YC
+AU  - Wang, CY
+AU  - Kumar, S
+AU  - Hsieh, CB
+AU  - Chang, KF
+AU  - Ko, CC
+TI  - Metal ion transporter SLC39A14-mediated ferroptosis and glycosylation modulate the tumor immune microenvironment: pan-cancer multi-omics exploration of therapeutic potential.
+T2  - Cancer Cell Int
+PY  - 2025
+DO  - 10.1186/s12935-025-04003-6
+UR  - https://doi.org/10.1186/s12935-025-04003-6
+ER  - 
+
+TY  - JOUR
+AU  - Quan, L
+AU  - Rong, H
+AU  - Yue, J
+AU  - Xu, J
+AU  - Zheng, Y
+AU  - Yuan, P
+TI  - Integrative pan-cancer analysis of intratumoral microbial communities for biomarker discovery and diagnostic modeling.
+T2  - J Transl Med
+PY  - 2025
+DO  - 10.1186/s12967-025-07355-9
+UR  - https://doi.org/10.1186/s12967-025-07355-9
+ER  - 
+
+TY  - UNPB
+AU  - Williams, DKA
+AU  - Graifman, G
+AU  - Hussain, N
+AU  - Amiel, EM
+AU  - Bass, K
+AU  - Batchu, S
+TI  - Digital Pathology, Deep Learning, and Cancer: A Narrative Review.
+T2  - medRxiv [Preprint]
+PY  - 2024
+DO  - 10.1101/2024.03.14.24304308
+UR  - https://doi.org/10.1101/2024.03.14.24304308
+ER  - 
+
+TY  - JOUR
+AU  - Cai, Z
+AU  - Poulos, RC
+AU  - Liu, J
+AU  - Zhong, Q
+TI  - Machine learning for multi-omics data integration in cancer.
+T2  - iScience
+PY  - 2022
+VL  - 25
+IS  - 2
+SP  - 103798
+DO  - 10.1016/j.isci.2022.103798
+UR  - https://doi.org/10.1016/j.isci.2022.103798
+ER  - 

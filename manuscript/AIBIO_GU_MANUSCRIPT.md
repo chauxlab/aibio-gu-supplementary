@@ -1,0 +1,228 @@
+# Artificial Intelligence–Driven Biomarker Discovery in Genitourinary Oncology: An Integrative Review
+
+## Abstract
+
+**Background:** Genitourinary malignancies — prostate, urothelial/bladder, renal cell, penile, and testicular germ cell tumors — account for a substantial share of the global cancer burden. Artificial intelligence (AI) and machine learning (ML) methods, applied to digital pathology, radiological imaging, and multi-omics data, have rapidly expanded as tools for biomarker discovery, but no integrative synthesis has mapped what has been produced across tumor sites, data modalities, and clinical purposes, or how mature this evidence is for clinical translation.
+
+**Methods:** We conducted an integrative review (Whittemore and Knafl framework) of studies using AI/ML to discover or prioritize a biomarker in genitourinary neoplasms. MEDLINE and Europe PMC were searched independently by tumor site (2026-09-09), followed by a supplementary citation-tracking search (2026-09-23). Two reviewers independently screened titles/abstracts and full texts, with consensus resolution. Studies were appraised with MMAT 2018, supplemented by PROBAST and TRIPOD+AI for prediction models, and extracted onto a standardized form. Synthesis was narrative, stratified by tumor site and data modality; no meta-analysis was planned given outcome heterogeneity.
+
+**Results:** Of 697 unique database records, 507 studies met eligibility (400 from database searching, 107 from citation tracking). Kidney (181), prostate (174), and bladder/urothelial (133) tumors dominated the corpus, while testicular (13) and penile (1) cancers were markedly underrepresented. Radiological imaging (217) and transcriptomics (164) were the leading modalities; prognosis (258) and diagnosis (187) the leading purposes. External validation was present in 258 of 507 studies, but only one reported demonstrated clinical utility, code was available in 21 of 507, and an AI/ML reporting guideline was declared in only 15 of 507. PROBAST risk of bias was high in 463 of 505 appraised studies.
+
+**Conclusion:** AI/ML-driven biomarker discovery in genitourinary oncology has produced an extensive descriptive map of prognostic and diagnostic signatures, concentrated in imaging and transcriptomic modalities for kidney, prostate, and bladder cancer, but translational readiness remains narrow: external validation is inconsistent, code and data sharing are rare, and reporting-guideline adherence is low. Penile and testicular cancers remain substantial evidence gaps.
+
+**Keywords:** artificial intelligence; machine learning; biomarker discovery; genitourinary neoplasms; radiomics; precision oncology; integrative review
+
+---
+
+## Introduction
+
+Cancers of the genitourinary tract — prostate, urinary bladder/urothelium, kidney, penis, and testis — represent one of the largest contributors to the global cancer burden, with prostate cancer alone accounting for 7.3% of all cancer diagnoses worldwide in 2022 [1]. Despite substantial heterogeneity across these sites in incidence, biology, and treatment pathways, they share a common clinical need: markers that reliably diagnose disease, stratify risk, and predict response to therapy beyond what histological grade and stage alone can offer.
+
+Artificial intelligence and machine learning have moved from a marginal, exploratory role in oncology to a central methodology for extracting patterns from high-dimensional biomedical data — digital histopathology, radiological imaging, and genomic, transcriptomic, proteomic, and methylation profiles — that are otherwise inaccessible to conventional statistical or visual analysis [2]. In genitourinary oncology specifically, this transformation has been visible on two fronts. First, radiomics and deep learning applied to multiparametric MRI, CT, and whole-slide histopathology images have been used to refine lesion detection, tumor grading, and subtype discrimination in prostate, kidney, and bladder cancer [3,4]. Second, machine learning pipelines applied to public and institutional multi-omics repositories have been used to prioritize candidate gene, protein, or methylation signatures with prognostic or predictive value, often validated across independent public cohorts.
+
+Both fronts, however, have matured largely as parallel, site-specific, and modality-specific literatures rather than as a coordinated body of evidence. Reviews to date have tended to focus on a single tumor site, a single data modality (most often radiomics), or a single clinical task, and have generally not addressed the level of methodological rigor — external validation, code and data availability, and adherence to AI-specific reporting standards — that determines whether a discovered biomarker is ready to move beyond a discovery cohort. This is not a minor omission: a biomarker signature that discriminates well within the cohort in which it was built can still fail entirely when applied to an independent population, and only a formal external-validation step, ideally reported against a checklist designed for AI/ML prediction models, can distinguish a robust discovery from an overfit one. Existing evidence also has not been systematically mapped across less common genitourinary sites, particularly penile and testicular germ cell tumors, where the volume of AI/ML-based biomarker work is presumed but not quantified, nor has it been mapped across the full spectrum of data modalities — from routinely available imaging and public transcriptomic repositories to less accessible proteomic, methylation, and multi-omics data — that together define how a candidate biomarker can be discovered today.
+
+This integrative review addresses that gap. Its objective is to map, across all genitourinary tumor sites, what biomarkers have been discovered or prioritized using AI/ML methods, on which data modalities, for which clinical purpose (diagnosis, prognosis, treatment-response prediction, or risk stratification), and with what level of analytical and clinical validation — including adherence to reporting guidelines for AI-based prediction models such as TRIPOD+AI and to risk-of-bias appraisal tools such as PROBAST. In doing so, it aims to characterize not only what the field has produced, but how close that production is to clinical translation, and to identify which genitourinary tumor sites and data modalities remain comparatively unexplored by these methods.
+
+---
+
+## Methods
+
+This integrative review follows the methodology of Whittemore and Knafl [5], appropriate for synthesizing a methodologically heterogeneous body of primary and translational research (retrospective and prospective cohorts, translational bioinformatic studies using public repositories, and mixed-methods model-development studies) that a systematic review restricted to a single design could not accommodate. Reporting followed the PRISMA 2020 statement [6], adapted for an integrative design.
+
+**Population, concept, and context.** Eligible studies enrolled patients, or used patient-derived samples or data (including public repositories such as TCGA and CPTAC), with genitourinary neoplasms: prostate carcinoma, urothelial/bladder carcinoma, renal cell carcinoma, penile squamous cell carcinoma, or testicular germ cell tumors. Eligible studies used AI/ML methods — including deep learning, classical machine learning, or ML-driven feature-selection pipelines — with the explicit aim of discovering, prioritizing, or validating a biomarker (molecular, histological, radiomic, or multi-omic) with a reported performance metric or association with a clinical outcome. Reviews, editorials, conference abstracts without primary data, purely methodological studies without a genitourinary cohort, models using only previously established biomarkers as inputs without deriving a new one, imaging/pathology models limited to detection or segmentation without biomarker derivation, and purely preclinical (cell-line or animal) studies without a human tissue/data component were excluded. No lower date limit was imposed a priori; the effective publication window of the included corpus was 2009–2026.
+
+**Search strategy.** Two independent, complementary databases were searched by tumor site (prostate, bladder/urothelial, kidney, penile, testicular), combining site-specific terms with AI/ML terms (artificial intelligence, machine learning, deep learning, radiomics, computational pathology) and biomarker-discovery terms (biomarker discovery, novel biomarker, prognostic/gene/radiomic signature, nomogram, molecular subtype): MEDLINE via PubMed and Europe PMC, both executed on 2026-09-09. Searches were run per tumor site rather than as a single combined equation, in part to respect database-specific limits on the number of Boolean operators per query and in part to allow the biomarker-discovery term block to be broadened for the lower-volume penile and testicular literatures. Europe PMC additionally captured preprints and records not indexed in MEDLINE, including records from Research Square, bioRxiv, medRxiv, and Preprints.org. Records were deduplicated across databases by PMID/DOI. A supplementary citation-tracking search was executed on 2026-09-23 via Europe PMC, comprising backward citations of narrative/systematic reviews identified but not eligible at title/abstract screening, and forward citations of the database-derived included studies; consistent with PRISMA 2020 guidance, records identified through citation tracking are reported separately from the database search and were not subject to a formal search-equation strategy.
+
+**Study selection and data extraction.** Titles/abstracts and full texts were each screened independently by two reviewers, with discrepancies resolved by consensus (title/abstract agreement: Cohen's kappa = 0.637). A standardized extraction form captured tumor site, study design, data source, sample size, data modality, AI/ML task and algorithm, input features, resulting biomarker, clinical purpose, performance metric and value, validation level, code and data availability, declared reporting guideline, and funding/conflicts of interest. Data extraction was performed by a single extractor per record, with a stratified pilot subset independently calibrated before full-scale extraction; this is noted as a design limitation below.
+
+**Critical appraisal.** Included studies were appraised with the Mixed Methods Appraisal Tool (MMAT), 2018 version [7], selected for its applicability across the heterogeneous study designs in this corpus. Studies developing or validating a prediction model were additionally appraised with PROBAST for risk of bias and applicability [8], and with the TRIPOD+AI checklist for completeness of AI/ML-specific reporting [9], since neither tool alone captures concerns specific to AI/ML models, such as data leakage or absence of external validation.
+
+**Synthesis.** Evidence was synthesized narratively, following the reduction, display, comparison, and conclusion-drawing stages of the integrative review method [5], stratified by tumor site and data modality, with aggregate mapping tables reporting the full 507-study corpus. Given the size of this corpus, the reference list below cites a curated set of studies selected to be representative of each tumor site, data modality, and clinical purpose combination, together with the studies of particular methodological interest (the single study reporting demonstrated clinical utility, the single eligible penile-cancer study, and the studies lacking a prediction-model appraisal block); it is not an exhaustive bibliography of all 507 included studies. No meta-analysis was performed, given the heterogeneity of outcomes, performance metrics, and validation designs across studies.
+
+---
+
+## Results
+
+### Study selection
+
+Database searching yielded 632 unique MEDLINE records and 576 unique Europe PMC records; after cross-database deduplication (511 overlapping records), 697 unique records entered screening. Title/abstract screening excluded 161 records, leaving 536 for full-text retrieval. Full text could not be retrieved for 100 of these 536 records (94 with no institutional subscription and no open-access copy, 1 under embargo until December 2026, 1 in a metadata-only repository, 2 behind publisher paywalls, 1 with a blocked preprint-server download, and 1 with a broken repository handle); the remaining 436 were assessed at full text, of which 36 were excluded (wrong intervention, n=19; wrong publication type, n=15; wrong outcome, n=1; wrong population, n=1), yielding 400 studies included from database searching.
+
+The supplementary citation-tracking search retrieved 4,953 citation links (backward citations from 20 reserved reviews and forward citations from the 400 database-derived includes), corresponding to 4,185 unique records; 215 were already in the corpus and 1 lacked a title, leaving 3,969 new records. A title-level filter requiring an explicit genitourinary site and an AI/ML, radiomics, or biomarker-discovery method excluded 3,279 records, leaving 690 for title/abstract screening. Of these, 348 were excluded (wrong publication type, n=199; wrong outcome, n=71; wrong intervention, n=70; wrong population, n=8), leaving 337 for full-text retrieval; text could not be recovered for 230, and eligibility remained unresolved for a further 5 records for which the retrievable text was insufficient to confirm eligibility. The remaining 107 records met eligibility criteria.
+
+In total, **507 studies** were included in this review (400 from database searching and 107 from citation tracking), published between 2009 and 2026.
+
+**Figure 1. PRISMA 2020 flow diagram**
+
+```
+IDENTIFICATION (database searching)
+  Records identified in databases:
+    MEDLINE (PubMed), n = 632
+    Europe PMC, n = 576
+  Records removed as duplicates (cross-database, by PMID/DOI): n = 511
+  Records after deduplication: n = 697
+
+SCREENING (database searching)
+  Records screened (title/abstract): n = 697
+  Records excluded: n = 161
+  Reports sought for retrieval: n = 536
+  Reports not retrieved: n = 100
+  Reports assessed for eligibility: n = 436
+  Reports excluded: n = 36
+    - wrong intervention, n = 19
+    - wrong publication type, n = 15
+    - wrong outcome, n = 1
+    - wrong population, n = 1
+
+INCLUDED (database searching)
+  Studies included: n = 400
+
+IDENTIFICATION (citation tracking, reported separately)
+  Citation links retrieved (Europe PMC): n = 4,953
+  Unique records: n = 4,185
+  Already in corpus / no title: n = 215 / n = 1
+  New records: n = 3,969
+  Excluded by title-level filter: n = 3,279
+  Records screened (title/abstract): n = 690
+  Records excluded: n = 348
+    - wrong publication type, n = 199
+    - wrong outcome, n = 71
+    - wrong intervention, n = 70
+    - wrong population, n = 8
+  Reports sought for retrieval: n = 337
+  Reports not retrieved: n = 230
+  Eligibility unresolved (insufficient text): n = 5
+
+INCLUDED (citation tracking)
+  Studies included: n = 107
+
+TOTAL STUDIES INCLUDED IN REVIEW: n = 507
+```
+
+### Overview of the included corpus
+
+Included studies concentrated in three tumor sites: kidney (181/507), prostate (174/507), and bladder/urothelial (133/507), together accounting for 488 of 507 studies. Testicular germ cell tumors contributed 13 studies, penile cancer a single study, one study spanned multiple renal-cell-carcinoma subtypes, and four studies were pan-cancer analyses with a genitourinary component. Radiological imaging (217/507) and transcriptomics (164/507) were the two leading data modalities, followed by multi-omics (66), digital pathology (23), other modalities (19), proteomics (8), methylation (6), and genomics (4). By clinical purpose, prognosis (258/507) and diagnosis (187/507) predominated over risk stratification (21), treatment-response prediction (19), and molecular subtyping (17).
+
+**Table 1. Distribution of included studies by tumor site and data modality (n=507)**
+
+| Site | Radiology | Transcriptomics | Multi-omics | Digital pathology | Other | Proteomics | Methylation | Genomics | Total |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Kidney | 75 | 62 | 29 | 5 | 5 | 1 | 1 | 3 | 181 |
+| Prostate | 86 | 48 | 17 | 8 | 6 | 6 | 2 | 1 | 174 |
+| Bladder/urothelial | 47 | 52 | 16 | 9 | 5 | 1 | 3 | 0 | 133 |
+| Testis | 9 | 0 | 2 | 1 | 1 | 0 | 0 | 0 | 13 |
+| Other/pan-cancer | 0 | 1 | 1 | 0 | 2 | 0 | 0 | 0 | 4 |
+| Penis | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| Multiple (renal subtypes) | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| **Total** | **217** | **164** | **66** | **23** | **19** | **8** | **6** | **4** | **507** |
+
+### Kidney
+
+Radiomics and deep learning applied to CT and MRI were the dominant approach for renal biomarker discovery. Multicenter CT-radiomics nomograms distinguished MIT-family translocation renal cell carcinoma from other subtypes with external validation AUC 0.914 [10], and multiphase CT deep-learning radiomics nomograms predicted preoperative WHO/ISUP grade of clear cell renal cell carcinoma (ccRCC) with AUC around 0.90 on internal and external validation [11]. A CT-radiomics score predicted postoperative overall survival with an optimism-corrected C-index of 0.73 [12], and a large multi-cohort CT deep-learning model linking imaging to pathology and survival matched or exceeded expert radiologists on a prospective diagnostic test set (AUC 0.871) — the only study in this review to report demonstrated clinical utility rather than analytical validation alone [13].
+
+Transcriptomic signatures were the second-leading approach. A 13-gene expression signature derived by minimum-redundancy-maximum-relevance selection predicted ccRCC survival with internal AUC 0.81–0.82 and generalized to an external cohort (AUC up to 0.71) better than 14 previously published signatures [14], and a 10-gene acteoside-related signature showed C-indices of 0.930, 0.633, and 0.719 across three independent cohorts [15]; other transcriptomic models targeted immunotherapy-response prediction [16]. Multimodal and multi-omics approaches integrated imaging with molecular data, including a multicenter model combining a 3D vision-transformer imaging signature with clinical variables for recurrence-free survival (external test AUC 0.846) [17] and an interpretable habitat-radiomics-plus-deep-learning model for grading (validation AUC 0.901) [18]. Digital pathology, genomic, proteomic, and methylation approaches were each represented by a smaller number of studies, including a deep-learning classifier of eosinophilic ccRCC morphology with prognostic value [19], genetic-algorithm feature selection for subtyping [20], a proteomic random-forest classifier distinguishing tumor from normal tissue (AUC 0.99) [21], and a methylation-driven LASSO prognostic model [22]. A multimodal CT-plus-histopathology fusion model predicted postoperative recurrence with test-set AUC 0.836 [23], while one study used machine learning purely for immune-biomarker pattern discovery without a validated clinical prediction model [24]. A pan-RCC-subtype transcriptomic classifier achieved 92% cross-validated accuracy for subgroup assignment with subtype-specific survival differences [25].
+
+### Prostate
+
+Imaging-based radiomics and deep learning were the leading modality for prostate cancer, most often applied to multiparametric MRI. A dual-center deep-learning radiomics model distinguished malignant from benign PI-RADS 3 lesions with AUC up to 0.964 internally and 0.925 on external validation [26], an MRI-radiomics nomogram predicted progression risk after endocrine therapy with C-index 0.795 on external validation [27], and multiregional MRI habitat analysis improved diagnostic discrimination over single-region radiomics [28]. Transcriptomic and integrative bioinformatic pipelines using public repositories (TCGA, GEO) prioritized diagnostic and prognostic gene panels, including hybrid gradient-boosting/random-forest models with external AUC up to 0.92 [29,30] and a consensus 9-gene T-cell-specific signature validated across four independent cohorts [31]. Multi-omics and single-cell-guided signatures extended this work into castration-resistant disease and the unfolded protein response, with C-indices above 0.72–0.82 across multiple external cohorts [32,33].
+
+Digital pathology contributed a multimodal AI-derived biomarker validated in NRG/RTOG trial cohorts that independently stratified 10-year distant metastasis after salvage radiotherapy (time-dependent AUC 0.74 versus 0.68 for a clinical nomogram) [34] and a pathomics model predicting bone metastasis (test AUC up to 0.93) [35]. Proteomic and methylation approaches included a seven-protein random-forest model separating rapid from slower progression to castration resistance (AUC 0.873) [36], a protein-corona plasma-proteomics study prioritizing candidate proteins linking prostate cancer and cardiovascular comorbidity without a validated prediction model [37], and a methylation random-forest classifier that retained discrimination across two external public cohorts (AUC 77.1% and 68.7%) [38]. Additional diagnostic work combined genomic and gut-microbiota data via Mendelian randomization [39] and blood-based exosomal-miRNA and radiomic models for bone-metastasis prediction [40].
+
+### Bladder and upper urinary tract urothelial carcinoma
+
+Transcriptomic and radiomic approaches were comparably represented for bladder/urothelial cancer, with transcriptomics (52/133) slightly exceeding radiology (47/133) — the only major site where imaging did not dominate. Multi-omics and machine-learning-derived prognostic signatures included a lipid-metabolic signature with stage- and mutation-dependent hazard ratios [41], a machine-learning-guided epithelial-plasticity score validated across four independent cohorts [42], and a gemcitabine-sensitivity long-noncoding-RNA signature supported by single-cell and functional validation [43]. On the imaging side, CT-radiomics nomograms predicted pathological grade (AUC 0.864) [44] and PD-L1 expression (external AUC 0.857) [45], and a multiphase CT-urography radiomics nomogram predicted high-grade upper-tract urothelial carcinoma (validation AUC 0.844) [46].
+
+Spatial multi-omics and integrative multi-omics machine learning further characterized PANoptosis-related subtypes and acetylation-linked prognostic signatures [47,48]. Digital pathology contributed a deep-learning-generated tumor-stroma-ratio biomarker with cross-center prognostic independence [49] and a deep-learning framework for upper-tract urothelial carcinoma that improved survival stratification over a prior segmentation-based model (C-index up to 0.795) [50]. A proteomics-based support-vector-machine analysis identified PYGB as an immunohistochemical biomarker distinguishing inverted urothelial papilloma from papillary urothelial carcinoma with inverted growth (AUROC 0.923) [51], a methylation signature stratified survival across four independent cohorts [52], and an integrated inflammatory/nutritional machine-learning score stratified disease-free survival after nephroureterectomy across four validation cohorts [53].
+
+### Testicular and penile tumors
+
+Testicular germ cell tumors (13/507) and penile cancer (1/507) were markedly underrepresented relative to the three major sites, and the available evidence was almost exclusively diagnostic (11/13 testicular studies) rather than prognostic. Radiomics combining CT features with serum and clinical markers improved preoperative prediction of retroperitoneal nodal metastasis in stage I disease (AUC 0.95) [54], and CT-radiomics models differentiated post-chemotherapy histology in metastatic disease (cross-validated AUC 0.945) [55]. Integrating circulating microRNAs (miR-371/miR-375) with CT radiomics improved prediction of teratoma in post-chemotherapy residual masses over radiomics alone [56], and a deep-learning classifier distinguished previously defined molecular subtypes of pure seminoma from whole-slide histopathology images (AUC 0.896) [57]. A combined serum-microRNA-and-radiomics system predicted residual retroperitoneal mass histology with a prospective test macro-average AUC of 0.91 [58]. The single eligible penile-cancer study used single-cell RNA sequencing and convergent machine-learning feature selection (LASSO, random forest, XGBoost; AUC 0.93–0.96) to identify PLA2G2A as a candidate biomarker of lymph-node metastasis via cancer-associated fibroblasts [59]. Two further studies extended single-cell/bulk transcriptomic signatures and pan-cancer microbiome-based classifiers into genitourinary cohorts without being site-specific to a single major organ [60,62], and one pan-cancer ferroptosis/glycosylation-related nomogram included a genitourinary component [61].
+
+### Validation, reporting, and risk of bias
+
+Some form of external validation was reported in 258 of 507 studies (external cohort, 206; external multicenter, 52); the remainder relied on internal hold-out (142), cross-validation (61), a single train-test split (38), or no validation (7); only one study reported demonstrated clinical utility rather than analytical validation alone [13]. Code was publicly available for 21 of 507 studies (available on request for 4, explicitly unavailable for 3, not reported for 479), and the underlying data were available for 77 (on request for 64, unavailable for 4, not reported for 362). A formal AI/ML- or diagnostic-accuracy-specific reporting guideline was declared in only 15 of 507 studies (TRIPOD, 7; TRIPOD+AI, 1; STARD, 1; CLAIM, 1; other, 5); 492 studies declared none.
+
+By MMAT, overall methodological quality was low-concern in 317 of 507 studies, moderate-concern in 177, and high-concern in 13. Of the 505 studies to which a prediction-model-specific appraisal applied (two studies lacked this block), PROBAST overall risk of bias was high in 463 and unclear in 42, with no study rated low risk; TRIPOD+AI reporting completeness was rated adequate in 236, partial in 263, and inadequate in 6.
+
+---
+
+## Discussion
+
+This integrative review maps, for the first time across all genitourinary tumor sites, an extensive body of 507 studies applying artificial intelligence and machine learning to biomarker discovery. Two findings define the shape of this literature. First, it is concentrated: three sites (kidney, prostate, bladder/urothelial) and two modalities (radiological imaging and transcriptomics) account for the large majority of the evidence, while penile cancer and testicular germ cell tumors remain substantial evidence gaps, with the latter's available studies almost exclusively diagnostic rather than prognostic or predictive. Second, the field is descriptively mature but translationally narrow: some external validation was present in roughly half of included studies, yet only a single study demonstrated clinical utility rather than analytical validation alone [13], code was shared in fewer than one in twenty studies, and only 3% of studies declared adherence to an AI-specific or diagnostic-accuracy reporting guideline.
+
+The dominance of imaging and transcriptomic modalities likely reflects data availability rather than biological priority: multiparametric MRI and CT are embedded in routine urological workups for prostate and renal masses, and public transcriptomic repositories such as TCGA provide large, analysis-ready cohorts that lower the barrier to signature discovery relative to proteomic, methylation, or genomic profiling, which require dedicated sample processing and remain comparatively scarce across all three major sites. The relative parity between imaging and transcriptomics in bladder/urothelial cancer, in contrast to the imaging-dominant pattern in kidney and prostate cancer, may reflect the earlier and more established role of molecular subtyping (basal/luminal) in bladder cancer research relative to the other two sites.
+
+The gap between analytical performance and clinical readiness observed here is consistent with broader concerns about the translation of AI-based prediction models in medicine, where models that perform well in a discovery cohort frequently fail to generalize, and reporting of methods and code remains inconsistent enough to limit independent verification [3,4]. The high PROBAST risk-of-bias burden found across this corpus (91% of appraised studies) mirrors similar findings in other prediction-model literatures and is not unique to genitourinary oncology; it reflects, in large part, structural features of discovery-phase research — small or single-center cohorts, unadjusted variable selection prior to validation, and outcome definitions convenient for retrospective public-repository analysis — that are difficult to avoid at the discovery stage but that limit how much weight any single signature should be given before independent, prospectively designed validation. Similarly, the near-absence of code and data sharing in this literature parallels documented barriers to reproducibility in computational pathology, where the gap between laboratory-phase model development and clinical deployment has been attributed in part to insufficient transparency and external testing [63]. The comparatively higher share of multi-omics work in kidney and prostate cancer also illustrates a broader integration challenge: combining data types with different scales, missingness patterns, and batch effects remains a substantial methodological obstacle to producing multi-omics signatures that are both interpretable and reproducible across cohorts [64].
+
+This review has several limitations inherent to its design. Database searching was limited to two channels (MEDLINE and Europe PMC); access to Embase, Web of Science, Scopus, and Cochrane CENTRAL, which would have required institutional subscriptions not available to this review, was not possible, and this is a documented limitation rather than an oversight. Full text could not be retrieved for 100 of 536 title/abstract-included database records and for 230 of 337 citation-tracking records, and eligibility could not be resolved for a further 5 records; these 335 unresolved or unretrieved records are not reflected in the site/modality/purpose mapping presented here and may shift its proportions modestly if recovered. Critical appraisal and data extraction were performed by a single extractor per record (with a subset independently piloted for calibration), rather than in full duplicate, which is a recognized limitation relative to double-extraction designs. Finally, as with any integrative review of a methodologically heterogeneous corpus, no meta-analysis was performed, and the narrative synthesis presented here should be read as a map of what has been studied and how rigorously, not as a pooled estimate of biomarker performance.
+
+In conclusion, artificial intelligence and machine learning have generated a large and rapidly growing map of candidate diagnostic and prognostic biomarkers in genitourinary oncology, concentrated in imaging and transcriptomic signatures for kidney, prostate, and bladder cancer. This map, however, describes a field still early in its translational trajectory: external validation is inconsistent, reproducibility infrastructure (code and data sharing) is scarce, and adherence to AI-specific reporting standards remains the exception rather than the rule. Penile and testicular germ cell tumors remain comparatively unstudied by these methods. Progress toward clinical adoption in this field will depend less on further discovery-phase signatures and more on prospective, externally validated, transparently reported studies that close the gap this review has quantified.
+
+---
+
+## References
+
+1. Bray F, Laversanne M, Sung H, Ferlay J, Siegel RL, Soerjomataram I, et al. Global cancer statistics 2022: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA Cancer J Clin. 2024;74(3):229-263. doi:10.3322/caac.21834
+2. Goda RY, Abdel-Aziz AK. Exploiting artificial intelligence in precision oncology: an updated comprehensive review. J Transl Med. 2025;23(1). doi:10.1186/s12967-025-07308-2
+3. Feretzakis G, Juliebø-Jones P, Tsaturyan A, Sarafidis M, Verykios VS, Somani BK. Emerging Trends in AI and Radiomics for Bladder, Kidney, and Prostate Cancer: A Critical Review. Cancers (Basel). 2024;16(4):810. doi:10.3390/cancers16040810
+4. Gelikman DG, Rais-Bahrami S, Pinto PA, Turkbey B. AI-powered radiomics: revolutionizing detection of urologic malignancies. Curr Opin Urol. 2023;34(1):1-7. doi:10.1097/MOU.0000000000001144
+5. Whittemore R, Knafl K. The integrative review: updated methodology. J Adv Nurs. 2005;52(5):546-553. doi:10.1111/j.1365-2648.2005.03621.x
+6. Page MJ, McKenzie JE, Bossuyt PM, Boutron I, Hoffmann TC, Mulrow CD, et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. BMJ. 2021;372:n71. doi:10.1136/bmj.n71
+7. Hong QN, Fàbregues S, Bartlett G, Boardman F, Cargo M, Dagenais P, et al. The Mixed Methods Appraisal Tool (MMAT) version 2018 for information professionals and researchers. Educ Inf. 2018;34(4):285-291. doi:10.3233/EFI-180221
+8. Wolff RF, Moons KGM, Riley RD, Whiting PF, Westwood M, Collins GS, et al. PROBAST: A Tool to Assess the Risk of Bias and Applicability of Prediction Model Studies. Ann Intern Med. 2019;170(1):51-58. doi:10.7326/M18-1376
+9. Collins GS, Moons KGM, Dhiman P, Riley RD, Beam AL, Van Calster B, et al. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ. 2024;385:e078378. doi:10.1136/bmj-2023-078378
+10. Lin SW, Wu XH, Liu WQ, Chen DN, Lin Y, Liu ZS, et al. Radiomics analysis of CT imaging for predicting MIT family translocation renal cell carcinoma: a multicenter retrospective clinical study. BMC Cancer. 2026. doi:10.1186/s12885-026-16334-2
+11. Yang C, Zhang Z, Wu B, Zhao H, Ma T, Luo Y, et al. Multiphase CT-based deep learning radiomics nomogram models for preoperative WHO/ISUP grading of clear cell renal cell carcinoma: a two-center validation study. BMC Med Imaging. 2026. doi:10.1186/s12880-026-02268-5
+12. He G, Lai L, Yu G, Pang H, Yu X, Zhang H, et al. Survival Prediction for Postoperative Patients With Kidney Cancer Based on Computed Tomography Radiomics: Retrospective Cohort Study. JMIR Med Inform. 2025. doi:10.2196/73162
+13. Xiong Y, Yao L, Lin J, Yao J, Bai Q, Huang Y, et al. Artificial intelligence links CT images to pathologic features and survival outcomes of renal masses. Nat Commun. 2025. doi:10.1038/s41467-025-56784-z
+14. Terrematte P, Andrade DS, Justino J, Stransky B, de Araújo DSA, Dória Neto AD. A Novel Machine Learning 13-Gene Signature: Improving Risk Analysis and Survival Prediction for Clear Cell Renal Cell Carcinoma Patients. Cancers (Basel). 2022;14(9):2111. doi:10.3390/cancers14092111
+15. Chen X, Zhang D, Ji Z, Sun S, Wang J, Shen S, et al. Dietary Polyphenol Acteoside-Related Molecular Signatures in Clear Cell Renal Cell Carcinoma. Food Sci Nutr. 2026. doi:10.1002/fsn3.72340
+16. Pan Y, Wu R, Zhu X, Hu X, Cheng J, Kong L. NECSO-based classification predicts immunotherapy efficacy and identifies FLAD1 as a therapeutic target. Front Immunol. 2026. doi:10.3389/fimmu.2026.1914332
+17. Wang YL, Liu F, Gu QB, Liu Q, Yang Y, Cheng F. Development and validation of an integrated machine learning model for recurrence-free survival prediction. Transl Oncol. 2026. doi:10.1016/j.tranon.2026.102937
+18. Tao X, Shan S, Chen X, Yu Z, Qi H. An interpretable machine learning model based on habitat radiomics combined with deep learning for preoperative grading. BMC Med Imaging. 2026. doi:10.1186/s12880-026-02285-4
+19. Ohe C, Yoshida T, Amin MB, Uno R, Atsumi N, Yasukochi Y, et al. Deep learning-based predictions of clear and eosinophilic phenotypes in clear cell renal cell carcinoma. Hum Pathol. 2022. doi:10.1016/j.humpath.2022.11.004
+20. Cattelani L, Fortino V. Triple and quadruple optimization for feature selection in cancer biomarker discovery. J Biomed Inform. 2024. doi:10.1016/j.jbi.2024.104736
+21. Azuaje F, Kim SY, Perez Hernandez D, Dittmar G. Connecting Histopathology Imaging and Proteomics in Kidney Cancer through Machine Learning. J Clin Med. 2019;8(10):1535. doi:10.3390/jcm8101535
+22. Tang W, Cao Y, Ma X. Novel prognostic prediction model constructed through machine learning on the basis of methylation-driven genes. Biosci Rep. 2020. doi:10.1042/BSR20201604
+23. Ma C, Feng B, Lei Y, Yu Z, Liu Y, Cui J, et al. Multimodal deep learning framework integrating multiphase CT and histopathological whole slide imaging. Sci Rep. 2025. doi:10.1038/s41598-025-25109-x
+24. Ager CR, Zhang M, Chaimowitz M, Bansal S, Tagore S, Obradovic A, et al. KLRG1 marks tumor-infiltrating CD4 T cell subsets associated with tumor progression and immunotherapy response. J Immunother Cancer. 2023. doi:10.1136/jitc-2023-006782
+25. Marquardt A, Solimando AG, Kerscher A, Bittrich M, Kalogirou C, Kübler H, et al. Subgroup-Independent Mapping of Renal Cell Carcinoma—Machine Learning Reveals Prognostic Mitochondrial Gene Signature. Front Oncol. 2021. doi:10.3389/fonc.2021.621278
+26. Zhang H, Zheng Y, Ao W, Ding J, Liu B, Huang H, et al. Deep learning based on multiparametric MRI for differentiating benign from malignant PI-RADS 3 prostate lesions. Sci Rep. 2026. doi:10.1038/s41598-026-56643-x
+27. Ding K, Chen Q, Huang L, Huang R, Liu M, Gong M, et al. Development and validation of an MRI radiomics-based model for predicting progression risk in prostate cancer. Transl Androl Urol. 2026. doi:10.21037/tau-2025-1-912
+28. Gong Z, Liu Z, Huang K, Zou J, Wu Z, Peng Y, et al. Habitat analysis based on magnetic resonance imaging for the prediction of prostate cancer. Quant Imaging Med Surg. 2025. doi:10.21037/qims-2025-223
+29. Kurt HA, Kılıçarslan S, Çiçekliyurt MM, Kılıçarslan S. Integrative Bioinformatics and Machine Learning Analysis Identifies Novel Molecular Biomarkers in Prostate Cancer. Int J Mol Sci. 2026;27(15):6635. doi:10.3390/ijms27156635
+30. Kilicarslan S, Cicekliyurt MM, Kiliçarslan S, Hassan DSM, Samee NA. Bioinformatics and machine learning integration reveals a novel 4-gene diagnostic signature in prostate cancer. Discov Oncol. 2026. doi:10.1007/s12672-025-04369-z
+31. Wang H, Li W, Deng W, Wu J, Li K, Huang X. Integrated Analysis of Single-Cell RNA Sequencing and Machine Learning Reveals a T Cell-Specific PANoptosis Signature. Hum Mutat. 2025. doi:10.1155/humu/8889021
+32. He Y, Li B, Tan Z, Jiang K, Ju W, Yu W, et al. A Platform-Independent Binary Gene-Pair Signature Derived from CRPC-Enriched Single-Cell Transcriptomics. Cancer Manag Res. 2026. doi:10.2147/CMAR.S623563
+33. Xue Y, Huang E, Luo C, Qian Y, Wu T, Chu C, et al. Multi-omics analyses related to unfolded protein response in prostate cancer. Front Immunol. 2026. doi:10.3389/fimmu.2026.1744197
+34. Morgan TM, Ren Y, Tang S, Zwerink W, Chen E, Mitani A, et al. Development and Validation of a Multimodal Artificial Intelligence-derived Digital Pathology-based Biomarker. Eur Urol. 2025. doi:10.1016/j.eururo.2025.12.007
+35. Zhang YF, Zhou C, Guo S, Wang C, Yang J, Yang ZJ, et al. Deep learning algorithm-based multimodal MRI radiomics and pathomics data improve prediction of bone metastasis. J Cancer Res Clin Oncol. 2024. doi:10.1007/s00432-023-05574-5
+36. Pan C, He Y, Wang H, Yu Y, Li L, Huang L, et al. Identifying Patients With Rapid Progression From Hormone-Sensitive to Castration-Resistant Prostate Cancer. Mol Cell Proteomics. 2023. doi:10.1016/j.mcpro.2023.100613
+37. Guha A, Sadeghi SA, Kunhiraman HH, Fang F, Wang Q, Rafieioskouei A, et al. AI-Driven Prediction of Cardio-Oncology Biomarkers Through Protein Corona Analysis. Chem Eng J. 2025. doi:10.1016/j.cej.2025.161134
+38. Toth R, Schiffmann H, Hube-Magg C, Buscheck F, Hoflmayer D, Weidemann S, et al. Random forest-based modelling to detect biomarkers for prostate cancer progression. Clin Epigenetics. 2019. doi:10.1186/s13148-019-0736-8
+39. Li W, Li C, Li X, Gao Z. Genetic relationships between the gut microbiota and prostate cancer: Mendelian randomization combined with machine learning. Aging Male. 2026. doi:10.1080/13685538.2026.2615561
+40. Wang C, Wei XP, Zhou C, Wang J, Zhang YF, He H, et al. Precise prediction of bone metastases and metastatic burden using exosomal miRNAs and radiomics. J Transl Med. 2025. doi:10.1186/s12967-025-06691-0
+41. Wang YD, Lai YL, Liu CH, Su YT, Shen PC, Chen FH, et al. Epigenomics-Guided Multi-Omics Integration Uncovers a Lipid-Metabolic Signature with Translational Utility. Comput Struct Biotechnol J. 2026. doi:10.34133/csbj.0139
+42. Yu D, Zhang Y, Tang J, Qing J, Hu K, Zhang J. A machine learning-guided epithelial plasticity score refines prognostication and immune-context stratification. Discov Oncol. 2026. doi:10.1007/s12672-026-05555-3
+43. Liu J, Tang X, Cui Y, Yang X, Yang Y, Du P. Development and validation of a gemcitabine sensitivity-related long noncoding RNA signature. Transl Androl Urol. 2026. doi:10.21037/tau-2025-1-970
+44. Zhou Q, Ma L, Yu Y, Zhang C, Ouyang J, Mao C, et al. Development of a radiomics and clinical feature-based nomogram for preoperative prediction of pathological grade. Front Oncol. 2025. doi:10.3389/fonc.2025.1661979
+45. Han X, Guan J, Guo L, Jiao Q, Wang K, Hou F, et al. A CT-based interpretable deep learning signature for predicting PD-L1 expression in bladder cancer. Cancer Imaging. 2025. doi:10.1186/s40644-025-00849-1
+46. Zheng Y, Shi H, Fu S, Wang H, Li X, Li Z, et al. Development and validation of a radiomics-based nomogram for predicting pathological grade of upper tract urothelial carcinoma. BMC Cancer. 2024. doi:10.1186/s12885-024-13325-z
+47. Peng L, Cai T, Xu P, Chen C, Xiang Q, Zhu Y, et al. Integrating Spatial Multi-Omics and Machine Learning to Unravel the Role of PANoptosis in Bladder Cancer. Oncol Res. 2025. doi:10.32604/or.2025.064331
+48. Tan Z, Chen X, Huang Y, Fu S, Li H, Gong C, et al. Integrative multi-omics and machine learning identify a robust signature for discriminating prognosis. J Cancer. 2025. doi:10.7150/jca.105066
+49. He Y, Xie J, Zhong S, Zhan C, Dai F, Lai H, et al. A Deep Learning-Generated Mixed Tumor-Stroma Ratio for Prognostic Stratification and Multi-omics Profiling. Research (Wash DC). 2026. doi:10.34133/research.1053
+50. Peng X, Tan H, Xiao B, Tan Y, Yue X, Cao Y, et al. Deep learning for prognostic stratification and biomarker exploration in upper tract urothelial carcinoma. Int J Surg. 2025. doi:10.1097/JS9.0000000000003581
+51. Jung M, Lee C, Han D, Kim K, Yang S, Nikas IP, et al. Proteomic-Based Machine Learning Analysis Reveals PYGB as a Novel Immunohistochemical Biomarker. Front Oncol. 2022. doi:10.3389/fonc.2022.841398
+52. Zhang J, Chen J, Xu M, Zhu T. Exploring prognostic DNA methylation genes in bladder cancer: a comprehensive analysis. Discov Oncol. 2024. doi:10.1007/s12672-024-01206-7
+53. Peng X, Xiao B, Yuan Z, Xv Y, Xiao M, Shi W. Machine learning-based integration of systemic immune-inflammation and nutritional signatures for prognosis. Front Immunol. 2026. doi:10.3389/fimmu.2026.1759547
+54. Lisson CS, Manoj S, Wolf D, Lisson CG, Schmidt SA, Beer M, et al. Machine Learning Classifiers for Predictive Biomarkers Combining Clinical and Radiomic Data in Testicular Germ Cell Tumors. Preprints.org. 2023. doi:10.20944/preprints202310.1175.v1
+55. Scavuzzo A, Pasini G, Crescio E, Jimenez-Rios MA, Figueroa-Rodriguez P, Comelli A, et al. Radiomics Analyses to Predict Histopathology in Patients with Metastatic Testicular Germ Cell Tumors. J Imaging. 2023;9(10):213. doi:10.3390/jimaging9100213
+56. Ozgun G, Abdalvand N, Ozcan G, Nip KM, Khazamipour N, Rahmim A, et al. Machine Learning Model Integrating Computed Tomography Image-Derived Radiomics and Circulating miRNAs. JCO Clin Cancer Inform. 2025. doi:10.1200/CCI-25-00105
+57. Medvedev KE, Acosta PH, Jia L, Grishin NV. Deep Learning for Subtypes Identification of Pure Seminoma of the Testis. Cancer Inform. 2024. doi:10.1177/2632010X241232302
+58. Li X, Ding R, Liu Z, Teixeira WMS, Ye J, Tian L, et al. A predictive system comprising serum microRNAs and radiomics for residual retroperitoneal masses. Cell Rep Med. 2024. doi:10.1016/j.xcrm.2024.101843
+59. Chen H, Weijia C, Fan L, Minghong F, Jianglai W, Zijian T, et al. PLA2G2A+ CAFs as a Key Driver of Lymph Node Metastasis in Penile Cancer and Its Underlying Mechanism. Res Sq [Preprint]. 2026. doi:10.21203/rs.3.rs-8936508/v1
+60. Ye C, Chen X, Chen Z, Liu S, Kong R, Lin W, et al. Comprehensive analysis of single-cell and bulk RNA sequencing data reveals an EGFR signature for predicting immune checkpoint inhibitor response. Front Immunol. 2025. doi:10.3389/fimmu.2025.1604394
+61. Chiang YC, Wang CY, Kumar S, Hsieh CB, Chang KF, Ko CC, et al. Metal ion transporter SLC39A14-mediated ferroptosis and glycosylation modulate the tumor immune microenvironment. Cancer Cell Int. 2025. doi:10.1186/s12935-025-04003-6
+62. Quan L, Rong H, Yue J, Xu J, Zheng Y, Yuan P. Integrative pan-cancer analysis of intratumoral microbial communities for biomarker discovery and diagnosis. J Transl Med. 2025. doi:10.1186/s12967-025-07355-9
+63. Williams DKA, Graifman G, Hussain N, Amiel EM, Bass K, Batchu S, et al. Digital Pathology, Deep Learning, and Cancer: A Narrative Review. medRxiv [Preprint]. 2024. doi:10.1101/2024.03.14.24304308
+64. Cai Z, Poulos RC, Liu J, Zhong Q. Machine learning for multi-omics data integration in cancer. iScience. 2022;25(2):103798. doi:10.1016/j.isci.2022.103798
