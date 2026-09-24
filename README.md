@@ -4,6 +4,8 @@ This repository is the supplementary material for the integrative review:
 
 > **Artificial Intelligence–Driven Biomarker Discovery in Genitourinary Oncology: An Integrative Review**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22928227.svg)](https://doi.org/10.5281/zenodo.22928227)
+
 It documents the full review process behind the manuscript — protocol, search strategies, screening decisions, data extraction, and critical appraisal — for the complete corpus of **507 included studies**, of which the manuscript itself cites a curated, representative subset (67 references; see `manuscript/`).
 
 No full-text PDFs are hosted in this repository. Every included and excluded study is identified by DOI and/or a direct link to the publisher/repository record (`primary_url` column in the screening files), so the original article can be retrieved from its source of record.
@@ -32,7 +34,7 @@ No full-text PDFs are hosted in this repository. Every included and excluded stu
 
 ## Citing this repository
 
-If you reuse this material, please cite the manuscript above and, if a persistent identifier is needed for the dataset itself, the archived release of this repository (see the Zenodo badge, once available).
+If you reuse this material, please cite the manuscript above and, for the dataset itself, this repository's Zenodo record: https://doi.org/10.5281/zenodo.22928227 (concept DOI, always resolving to the latest archived version).
 
 ## License
 
