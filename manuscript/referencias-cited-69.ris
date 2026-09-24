@@ -58,6 +58,20 @@ UR  - https://doi.org/10.1097/mou.0000000000001144
 ER  - 
 
 TY  - JOUR
+AU  - Kim, A
+AU  - Moore, NA
+AU  - Dong, T
+TI  - Artificial intelligence in genitourinary oncology: publication trends and systematic review.
+T2  - BJU Int
+PY  - 2026
+VL  - 138
+IS  - 4
+SP  - 549-557
+DO  - 10.1111/bju.70361
+UR  - https://doi.org/10.1111/bju.70361
+ER  - 
+
+TY  - JOUR
 AU  - Whittemore, R
 AU  - Knafl, K
 TI  - The integrative review: updated methodology.
@@ -832,20 +846,6 @@ UR  - https://doi.org/10.3389/fimmu.2025.1604394
 ER  - 
 
 TY  - JOUR
-AU  - Chiang, YC
-AU  - Wang, CY
-AU  - Kumar, S
-AU  - Hsieh, CB
-AU  - Chang, KF
-AU  - Ko, CC
-TI  - Metal ion transporter SLC39A14-mediated ferroptosis and glycosylation modulate the tumor immune microenvironment: pan-cancer multi-omics exploration of therapeutic potential.
-T2  - Cancer Cell Int
-PY  - 2025
-DO  - 10.1186/s12935-025-04003-6
-UR  - https://doi.org/10.1186/s12935-025-04003-6
-ER  - 
-
-TY  - JOUR
 AU  - Quan, L
 AU  - Rong, H
 AU  - Yue, J
@@ -857,6 +857,20 @@ T2  - J Transl Med
 PY  - 2025
 DO  - 10.1186/s12967-025-07355-9
 UR  - https://doi.org/10.1186/s12967-025-07355-9
+ER  - 
+
+TY  - JOUR
+AU  - Chiang, YC
+AU  - Wang, CY
+AU  - Kumar, S
+AU  - Hsieh, CB
+AU  - Chang, KF
+AU  - Ko, CC
+TI  - Metal ion transporter SLC39A14-mediated ferroptosis and glycosylation modulate the tumor immune microenvironment: pan-cancer multi-omics exploration of therapeutic potential.
+T2  - Cancer Cell Int
+PY  - 2025
+DO  - 10.1186/s12935-025-04003-6
+UR  - https://doi.org/10.1186/s12935-025-04003-6
 ER  - 
 
 TY  - UNPB
@@ -928,4 +942,17 @@ IS  - 9
 SP  - e253351
 DO  - 10.1001/jamahealthforum.2025.3351
 UR  - https://doi.org/10.1001/jamahealthforum.2025.3351
+ER  - 
+
+TY  - JOUR
+AU  - Moons, KGM
+AU  - Damen, JAAG
+AU  - Kaul, TK
+TI  - PROBAST+AI: an updated quality, risk of bias, and applicability assessment tool for prediction models using regression or artificial intelligence methods.
+T2  - BMJ
+PY  - 2025
+VL  - 388
+SP  - e082505
+DO  - 10.1136/bmj-2024-082505
+UR  - https://doi.org/10.1136/bmj-2024-082505
 ER  - 
