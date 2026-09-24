@@ -17,10 +17,10 @@ other_methods,already_in_corpus,215,
 other_methods,no_title,1,
 other_methods,new_records,3969,
 other_methods,title_filter_excluded,3279,Title must name a GU site and an AI/radiomics/biomarker method
-other_methods,title_abstract_screened,690,
+other_methods,title_abstract_screened,690,690 = title_abstract_excluded 348 + reports_sought 337 + full_text_not_recovered_unresolved 5
 other_methods,title_abstract_excluded,348,wrong publication type 199; wrong outcome 71; wrong intervention 70; wrong population 8
-other_methods,full_text_not_recovered_unresolved,5,Eligibility not settled
-other_methods,reports_sought,337,
+other_methods,full_text_not_recovered_unresolved,5,Same 5 records. Maybes whose full text was sought and not recovered; eligibility not settled. Outside reports_sought, not a further dedup and not a counting error.
+other_methods,reports_sought,337,Title/abstract Included only: 334 original includes plus 3 Maybes resolved as Included. The unresolved 5 are not in this row.
 other_methods,reports_not_retrieved,230,
 other_methods,studies_included,107,
 review,studies_included_total,507,400 database full-text includes plus 107 other-methods includes
