@@ -32,6 +32,10 @@ No full-text PDFs are hosted in this repository. Every included and excluded stu
 - **Appraisal:** MMAT 2018 for all studies; PROBAST and TRIPOD+AI additionally applied to prediction-model studies.
 - **Corpus:** 507 studies included (400 from database searching, 107 from citation tracking) out of 697 unique database records and 4,185 unique citation-tracking records screened.
 
+## Status
+
+Manuscript and supplementary data are consistency-audited and ready for author review (as of 2026-09-25). One open item before final submission: Figure 1 (PRISMA 2020 flow diagram) is being redesigned in Canva by the authors; `manuscript/PRISMA_2020_AIBIO_GU.png` is a working version with verified numbers, to be swapped for the final design once ready — no other content depends on this pending swap.
+
 ## Citing this repository
 
 If you reuse this material, please cite the manuscript above and, for the dataset itself, this repository's Zenodo record: https://doi.org/10.5281/zenodo.22928227 (concept DOI, always resolving to the latest archived version).
