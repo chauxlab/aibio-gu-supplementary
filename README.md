@@ -34,7 +34,7 @@ No full-text PDFs are hosted in this repository. Every included and excluded stu
 
 ## Status
 
-Manuscript and supplementary data are consistency-audited and ready for author review (as of 2026-09-25). One open item before final submission: Figure 1 (PRISMA 2020 flow diagram) is being redesigned in Canva by the authors; `manuscript/PRISMA_2020_AIBIO_GU.png` is a working version with verified numbers, to be swapped for the final design once ready — no other content depends on this pending swap.
+Manuscript and supplementary data are consistency-audited and ready for author review (as of 2026-09-25). Figure 1 (PRISMA 2020 flow diagram) is the authors' final Canva design, verified number-for-number against `prisma/prisma-counts.csv`; author byline order (Britos, Chaux) matches the current manuscript.
 
 ## Citing this repository
 
