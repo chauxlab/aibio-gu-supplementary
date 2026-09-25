@@ -52,54 +52,9 @@ The supplementary citation-tracking search retrieved 4,953 citation links (backw
 
 In total, **507 studies** were included in this review (400 from database searching and 107 from citation tracking), published between 2009 and 2026.
 
-**Figure 1. PRISMA 2020 flow diagram**
+**Figure 1.** PRISMA 2020 flow diagram of study identification, screening, and inclusion, reported separately for the two search arms (database searching and citation tracking) and converging on a single included corpus of 507 studies (400 from database searching, 107 from citation tracking). The 5 records with unresolved eligibility (full text sought via citation tracking but never recovered) are shown as a separate branch, tracked apart from the 337 records whose full text was successfully sought in that arm.
 
-```
-IDENTIFICATION (database searching)
-  Records identified in databases:
-    MEDLINE (PubMed), n = 632
-    Europe PMC, n = 576
-  Records removed as duplicates (cross-database, by PMID/DOI): n = 511
-  Records after deduplication: n = 697
-
-SCREENING (database searching)
-  Records screened (title/abstract): n = 697
-  Records excluded: n = 161
-  Reports sought for retrieval: n = 536
-  Reports not retrieved: n = 100
-  Reports assessed for eligibility: n = 436
-  Reports excluded: n = 36
-    - wrong intervention, n = 19
-    - wrong publication type, n = 15
-    - wrong outcome, n = 1
-    - wrong population, n = 1
-
-INCLUDED (database searching)
-  Studies included: n = 400
-
-IDENTIFICATION (citation tracking, reported separately)
-  Citation links retrieved (Europe PMC): n = 4,953
-  Unique records: n = 4,185
-  Already in corpus / no title: n = 215 / n = 1
-  New records: n = 3,969
-  Excluded by title-level filter: n = 3,279
-  Records screened (title/abstract): n = 690
-    (splits into three groups: 348 excluded + 337 sought + 5 unresolved "maybe"; not 690 - 348)
-  Records excluded: n = 348
-    - wrong publication type, n = 199
-    - wrong outcome, n = 71
-    - wrong intervention, n = 70
-    - wrong population, n = 8
-  Reports sought for retrieval: n = 337
-  Reports not retrieved: n = 230
-  Assessed and included from this arm: n = 107 (= 337 - 230)
-  Eligibility unresolved, tracked separately from the 337 sought (provisional "maybe" decisions, full text sought but not recovered): n = 5
-
-INCLUDED (citation tracking)
-  Studies included: n = 107
-
-TOTAL STUDIES INCLUDED IN REVIEW: n = 507
-```
+![Figure 1. PRISMA 2020 flow diagram](PRISMA_2020_AIBIO_GU.png)
 
 ### Overview of the included corpus
 
