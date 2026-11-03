@@ -21,7 +21,7 @@ No full-text PDFs are hosted in this repository. Every included and excluded stu
 | `extraction/` | Full data-extraction dataset (n=507) and its codebook. |
 | `risk_of_bias/` | Full critical-appraisal dataset (MMAT 2018 + PROBAST + TRIPOD+AI, n=507) and its codebook. |
 | `logs/` | Decision log and workflow log documenting methodological decisions made during screening, appraisal, and extraction (both authors acted as the two independent reviewers referenced throughout). |
-| `manuscript/` | The submitted manuscript (Markdown) and the RIS file for the 69 references actually cited in its text. |
+| `manuscript/` | `AIBIO_GU_MANUSCRIPT_MRA_accepted.md`: the version accepted in *Medical Research Archives* (blinded format, AMA superscript citations; Figure 1 as `PRISMA_2020_AIBIO_GU_r1.png`). `AIBIO_GU_MANUSCRIPT.md` and `PRISMA_2020_AIBIO_GU.png`: the earlier pre-submission version, kept for provenance. Also the RIS file for the 69 references cited in the text. |
 | `AIBIO_GU_synthesis_summary.md` | Narrative synthesis and mapping tables (tumor site × data modality × clinical purpose) underlying the manuscript's Results section. |
 
 ## Review design
@@ -34,7 +34,7 @@ No full-text PDFs are hosted in this repository. Every included and excluded stu
 
 ## Status
 
-Manuscript and supplementary data are consistency-audited and ready for author review (as of 2026-09-25). Figure 1 (PRISMA 2020 flow diagram) is the authors' final Canva design, verified number-for-number against `prisma/prisma-counts.csv`; author byline order (Britos, Chaux) matches the current manuscript.
+The manuscript was accepted for publication in *Medical Research Archives* (European Society of Medicine) on 2026-11-02 and is in copyediting (submission MRA-2026-0777). The repository was synchronized with the accepted version on 2026-11-03; it will be updated again once the published version and its DOI are available.
 
 ## Citing this repository
 
